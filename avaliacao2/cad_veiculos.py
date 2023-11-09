@@ -1,7 +1,6 @@
 # MARCUS
 
 def cadastrar_veiculos():
-
     print('\n############## CADASTRO DE VEÍCULOS - Versão1.0 ##############')
 
     import os
@@ -128,8 +127,7 @@ def cadastrar_veiculos():
                     cadastros = retorno
             else:
                 print('Opção Inválida !!')
-
     menu()
-    
+
 if __name__ == '__main__':
-    cadastrar_veiculos()
+    menu()
