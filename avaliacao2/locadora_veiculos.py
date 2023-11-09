@@ -1,6 +1,6 @@
-import cadastrar_clientes
-import cadastrar_funcionarios
-import cadastrar_veiculos
+import cad_clientes
+import cad_funcionarios
+import cad_veiculos
 import locacao
 
 def menu():
@@ -26,13 +26,13 @@ def menu():
     while True:
         opcao = input("""
             ------------ LOCADORA VEÍCULOS -------------
-            ********************************************
-
-                ---------- menu de opções ----------
+             ******************************************
+               ----------- MENU PRINCIPAL -----------
+                -------------- opções --------------
                 [s] ........................... SAIR
-                [1] ........................ Locação
-                [2] ............. Cadastrar Veículos
-                [3] ............. Cadastrar Clientes
+                [1] ............. Cadastrar Veículos
+                [2] ............. Cadastrar Clientes
+                [3] ........................ Locação
                 [4] ......... Cadastrar Funcionários
 
             ********************************************
@@ -43,13 +43,17 @@ def menu():
             print('\n - PROGRAMA ENCERRADO COM SUCESSO! - \n')
             break
         elif opcao == '1':
-            locacao.locacao()
+            print('\n - CADASTRO DE VEÍCULOS - \n')
+            cad_veiculos.cadastrar_veiculos()
         elif opcao == '2':
-            cadastrar_veiculos.cadastrar_veiculos()
+            print('\n - CADASTRO DE CLIENTES - \n')
+            cad_clientes.cadastrar_clientes()
         elif opcao == '3':
-            cadastrar_clientes.cadastrar_clientes()
+            print('\n - LOCAÇÃO - \n')
+            locacao.locacao()
         elif opcao == '4':
-            cadastrar_funcionarios.cadastrar_funcionarios()
+            print('\n - CADASTRO DE FUNCIONÁRIOS - \n')
+            cad_funcionarios.cadastrar_funcionarios()
         else:
             print('\n - OPÇÃO INVÁLIDA! - \n')
 

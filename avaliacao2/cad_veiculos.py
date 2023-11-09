@@ -1,7 +1,11 @@
-import os
+# MARCUS
 
 def cadastrar_veiculos():
+
     print('\n############## CADASTRO DE VEÍCULOS - Versão1.0 ##############')
+
+    import os
+    import json
 
     def cadastrar(cadastros):
 
@@ -14,13 +18,12 @@ def cadastrar_veiculos():
         ################################################
         """
 
-        classe_veiculo = input('Digite a Classe do Veículo (Econômico, Luxo, SUV: ')
-        fab_veiculo    = input('Digite o Fabricante do Veículo: ')
-        marca_veículo  = input('Digite a Marca do Veículo: ')
-        cor_veiculo    = input('Digite a Cor do Veículo: ')
-        ano_veiculo    = input('Digite o Ano do Veículo: ')
-        mod_veiculo    = input('Digite o Ano do Modelo do Veículo: ')
-        placa_veiculo  = input('Digite a Placa do Veículo: ')
+        fab_veiculo = input('Digite o Fabricante do Veículo: ')
+        marca_veículo = input('Digite a Marca do Veículo: ')
+        cor_veiculo = input('Digite a Cor do Veículo: ')
+        ano_veiculo = input('Digite o Ano do Veículo: ')
+        mod_veiculo = input('Digite o Ano do Modelo do Veículo: ')
+        placa_veiculo = input('Digite a Placa do Veículo: ')
         diaria_veiculo = input('Digite o Valor da Diária do Veículo: ')
 
 
@@ -28,7 +31,7 @@ def cadastrar_veiculos():
             rga = 1
         else:
             rga = max(cadastros.keys())+1
-        cadastros[rga] = (classe_veiculo, fab_veiculo, marca_veículo, cor_veiculo, ano_veiculo, mod_veiculo, placa_veiculo, diaria_veiculo)
+        cadastros[rga] = (fab_veiculo, marca_veículo, cor_veiculo, ano_veiculo, mod_veiculo, placa_veiculo, diaria_veiculo)
 
     def listagem(cadastros):
 
@@ -74,7 +77,7 @@ def cadastrar_veiculos():
 
         filename = input('Nome do Arquivo: ')
         f = open(filename, 'w')
-        f.write(str(cadastros))
+        f.write(json.dumps(cadastros))
         f.close()
 
     def carregar():
@@ -94,7 +97,7 @@ def cadastrar_veiculos():
             f = open(filename, 'r')
             texto = f.read()
             f.close()
-            return eval(texto)
+            return json.loads(texto)
         else:
             print('Arquivo Inexistente !!')
             return None
@@ -102,18 +105,15 @@ def cadastrar_veiculos():
     def menu():
 
         """
-        ####################
-        # Menu do Veículo  #
-        ####################
+        #####################
+        # Menu do Veículo   #
+        #####################
         """
 
         cadastros = dict()
         while True:
-            print('\n[v] - Voltar ao menu principal\n[1] - Cadastrar\n[2] - Listar\n[3] - Buscar RGA\n[4] - Salvar\n[5] - Carregar')
+            print('\n[1] - Cadastrar\n[2] - Listar\n[3] - Buscar RGA\n[4] - Salvar\n[5] - Carregar')
             opcao = input('\nDigite a Opção: ')
-            if opcao == 'v':
-                print('\n - VOLTANDO AO MENU PRINCIPAL! - \n')
-                break
             if opcao == '1':
                 cadastrar(cadastros)
             elif opcao == '2':
