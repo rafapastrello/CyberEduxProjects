@@ -119,6 +119,7 @@ def cadastrar_funcionarios():
         endereco_funcionario = input('Digite o ENDEREÇO do funcionário: ')
 
         cadastros[cpf_funcionario] = [cargo_funcionario, nome_funcionario, data_admissão, salario_funcionario, email_funcionario, endereco_funcionario]
+        print('\n - FUNCIONÁRIO CADASTRADO!!! - \n')
 
     def listar(cadastros):
         """
@@ -127,10 +128,10 @@ def cadastrar_funcionarios():
             - Exemplo de uso:
             >>> listar(cadastros):
         """
-        print(f'{"ID(CPF)":<14} | {"CARGO":<25} | {"NOME":<15} | {"DATA ADMISSÂO":<13} | {"SALÁRIO":<9} | {"CONTATO(EMAIL)":<20} | {"ENDEREÇO":<20}')
-        print("-" * 120)
+        print(f'{"ID(CPF)":<14} | {"CARGO":<25} | {"NOME":<15} | {"DATA ADMISSÂO":<13} | {"SALÁRIO":<9} | {"CONTATO(EMAIL)":<22} | {"ENDEREÇO":<20}')
+        print("-" * 125)
         for cpf in cadastros.keys():
-            print(f'{cpf:<14} | {cadastros[cpf][0]:<25} | {cadastros[cpf][1]:<15} | {cadastros[cpf][2]:<13} | {cadastros[cpf][3]:<9} | {cadastros[cpf][4]:<20}| {cadastros[cpf][5]:<20}')
+            print(f'{cpf:<14} | {cadastros[cpf][0]:<25} | {cadastros[cpf][1]:<15} | {cadastros[cpf][2]:<13} | {cadastros[cpf][3]:<9} | {cadastros[cpf][4]:<22} | {cadastros[cpf][5]:<20}')
 
     def buscar(cadastros):
         """
@@ -147,15 +148,91 @@ def cadastrar_funcionarios():
 
     def editar(cadastros):
         """
-            - Função para editar um funcionário pela chave(CPF) no dicionário "cadastros";
+            - Função para editar os dados do funcionário, buscando-o pela chave(CPF) no dicionário "cadastros" e permitindo alterar o cargo, nome, data de admissão, salário, contato e endereço;
             - Recebe o parâmetro (cadastros);
             - Exemplo de uso:
             >>> editar(cadastros):
         """
         cpf = input('CPF: ')
         if cpf in cadastros.keys():
-            nome = input('Mude o nome')
-            cadastros[cpf][1] = nome
+            opcao = input("""
+        ************************************************
+            ________________ OPÇÕES ________________
+
+            [v] ............................. Voltar
+            [1] ...................... Alterar cargo
+            [2] ....................... Alterar nome
+            [3] ........... Alterar data de admissão
+            [4] .................... Alterar salário
+            [5] ............ Alterar contato (email)
+            [6] ................... Alterar endereço
+        ************************************************
+
+        >>> Digite a opção: """)
+        
+            if opcao == 'v':
+                print('\n - VOLTANDO!!! - \n')
+                return
+            elif opcao == '1':
+                print('\n - ALTERAR CARGO - \n')
+                cargo_funcionario = input("""
+        *************************************************
+            [v] .............................. Voltar
+
+            __________ CARGOS DISPONÍVEIS ___________
+
+            [1] ........... Assistente administrativo
+            [2] ............. Representante de vendas
+            [3] ....................... Recepcionista
+            [4] ........................... Atendente
+        *************************************************
+
+        >>> Digite o novo cargo do funcionário: """)
+                if cargo_funcionario == 'v':
+                    print('\n - VOLTANDO AO MENU OPÇÕES -> FUNCIONÁRIOS!!! - \n')
+                    return
+                elif cargo_funcionario == '1':
+                    cargo_funcionario = 'Assistente administrativo'
+                elif cargo_funcionario == '2':
+                    cargo_funcionario = 'Representante de vendas'
+                elif cargo_funcionario == '3':
+                    cargo_funcionario = 'Recepcionista'
+                elif cargo_funcionario == '4':
+                    cargo_funcionario = 'Atendente'
+                else:
+                    print('\n - OPÇÃO INVÁLIDA!!! - \n')
+                    return
+                cadastros[cpf][0] = cargo_funcionario
+                print('\n - ALTERAÇÃO CONCLUÍDA!!! - \n')
+
+            elif opcao == '2':
+                print('\n - ALTERAR NOME - \n')
+                nome_funcionario = input('Novo nome: ')
+                cadastros[cpf][1] = nome_funcionario
+                print('\n - ALTERAÇÃO CONCLUÍDA!!! - \n')
+            elif opcao == '3':
+                print('\n - ALTERAR DATA DE ADMISSÃO - \n')
+                data_admissão = input('Nova data de admissão: ')
+                cadastros[cpf][2] = data_admissão
+                print('\n - ALTERAÇÃO CONCLUÍDA!!! - \n')
+            elif opcao == '4':
+                print('\n - ALTERAR SALÁRIO - \n')
+                salario_funcionario = input('Novo salário: ')
+                cadastros[cpf][3] = salario_funcionario
+                print('\n - ALTERAÇÃO CONCLUÍDA!!! - \n')
+            elif opcao == '5':
+                print('\n - ALTERAR CONTATO (email) - \n')
+                email_funcionario = input('Novo email: ')
+                cadastros[cpf][4] = email_funcionario
+                print('\n - ALTERAÇÃO CONCLUÍDA!!! - \n')
+            elif opcao == '6':
+                print('\n - ALTERAR ENDEREÇO - \n')
+                endereco_funcionario = input('Novo endereço: ')
+                cadastros[cpf][5] = endereco_funcionario
+                print('\n - ALTERAÇÃO CONCLUÍDA!!! - \n')
+            else:
+                print('\n - OPÇÃO INVÁLIDA!!! - \n')
+
         else:
             print('\n - CPF INEXISTENTE!!! - \n')
 
@@ -187,6 +264,8 @@ def cadastrar_funcionarios():
         f.write(json.dumps(cadastros))
         f.close()
 
+        print(f'\n - ARQUIVO " {filename} " SALVO!!! - \n')
+
     def carregar(cadastros):
         """
             - Função para buscar um funcionário pela chave(CPF) no dicionário "cadastros";
@@ -201,6 +280,7 @@ def cadastrar_funcionarios():
             f.close()
             cadastros.clear()
             cadastros.update(json.loads(texto))
+            print('\n - ARQUIVO CARREGADO!!! - \n')
         else:
             print('\n - ARQUIVO INEXISTENTE!!! - \n')
         

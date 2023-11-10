@@ -29,10 +29,10 @@ def menu():
              ******************************************
                ----------- MENU PRINCIPAL -----------
                 -------------- opções --------------
-                [s] ........................... SAIR
+                [s] ............... ENCERRAR SISTEMA
                 [1] ............. Cadastrar Veículos
                 [2] ............. Cadastrar Clientes
-                [3] ........................ Locação
+                [3] ............ Locação de veículos
                 [4] ......... Cadastrar Funcionários
 
             ********************************************
@@ -49,7 +49,7 @@ def menu():
             print('\n - CADASTRO DE CLIENTES - \n')
             cad_clientes.cadastrar_clientes()
         elif opcao == '3':
-            print('\n - LOCAÇÃO - \n')
+            print('\n - LOCAÇÃO DE VEÍCULOS - \n')
             locacao.locacao()
         elif opcao == '4':
             print('\n - CADASTRO DE FUNCIONÁRIOS - \n')
@@ -60,3 +60,4 @@ def menu():
 
 if __name__ == '__main__':
     menu()
+    

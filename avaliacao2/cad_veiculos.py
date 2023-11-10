@@ -1,133 +1,135 @@
-# MARCUS
+# veiculos
+
+import json
+import os
+
 
 def cadastrar_veiculos():
-    print('\n############## CADASTRO DE VEÍCULOS - Versão1.0 ##############')
+    # função para salvar veiculo
 
-    import os
-    import json
+    def salvarVeiculo(veiculos):
+        with open("veiculos.txt", 'w') as c:
+            json.dump(veiculos, c)
 
-    def cadastrar(cadastros):
+            # função para carregar  o diionário "clientes"
 
-        """
-        ################################################
-        # Função para fazer o cadastro do veículo      #
-        #                                              #
-        # Parametros:                                  #
-        # Cadastros (dict) - dicionário de cadastros   #
-        ################################################
-        """
+    def carregarVeiculo():
+        if not os.path.exists('veiculos.txt'):
+            salvarVeiculo({})
+        with open('veiculos.txt', 'r') as r:
+            veiculo = json.loads(r.read())
+            return veiculo
 
-        fab_veiculo = input('Digite o Fabricante do Veículo: ')
-        marca_veículo = input('Digite a Marca do Veículo: ')
-        cor_veiculo = input('Digite a Cor do Veículo: ')
-        ano_veiculo = input('Digite o Ano do Veículo: ')
-        mod_veiculo = input('Digite o Ano do Modelo do Veículo: ')
-        placa_veiculo = input('Digite a Placa do Veículo: ')
-        diaria_veiculo = input('Digite o Valor da Diária do Veículo: ')
+    #  função para cadastrar veículos com salvamento automatico
 
-
-        if cadastros == dict():
-            rga = 1
-        else:
-            rga = max(cadastros.keys())+1
-        cadastros[rga] = (fab_veiculo, marca_veículo, cor_veiculo, ano_veiculo, mod_veiculo, placa_veiculo, diaria_veiculo)
-
-    def listagem(cadastros):
-
-        """
-        ################################################
-        # Função para mostrar os cadastros.            #
-        #                                              #
-        # Parametros:                                  #
-        # Cadastros (dict) - dicionário de cadastros   #
-        ################################################
-        """
-
-        for rga in cadastros.keys():
-            print('RGA', rga, 'Dados', cadastros[rga])
-
-    def buscar(cadastros):
-
-        """
-        ################################################
-        # Função para busca do estudante por RGA.      #
-        #                                              #
-        # Parametros:                                  #
-        # Cadastros (dict) - dicionário de cadastros   #
-        ################################################
-        """
-
-        rga = int(input('RGA: '))
-        if rga in cadastros.keys():
-            print(cadastros[rga])
-        else:
-            print('Veículo Inexistente !!')
-
-    def salvar(cadastros):
-
-        """
-        ################################################
-        # Função para salvar cadastros em arquivo.     #
-        #                                              #
-        # Parametros:                                  #
-        # Cadastros (dict) - dicionário de cadastros   #
-        ################################################
-        """
-
-        filename = input('Nome do Arquivo: ')
-        f = open(filename, 'w')
-        f.write(json.dumps(cadastros))
-        f.close()
-
-    def carregar():
-
-        """
-        #########################################################
-        # Função que retorna o dicionário salvo em um arquivo   #
-        #                                                       #
-        # Retorno:                                              #
-        # Dict|NoneType: caso o arquivo exista, retorna         #
-        # o dicionário. Caso não exista, retorna None.          #
-        #########################################################
-        """
-
-        filename = input('Nome do Arquivo: ')
-        if os.path.exists(filename):
-            f = open(filename, 'r')
-            texto = f.read()
-            f.close()
-            return json.loads(texto)
-        else:
-            print('Arquivo Inexistente !!')
-            return None
-
-    def menu():
-
-        """
-        #####################
-        # Menu do Veículo   #
-        #####################
-        """
-
-        cadastros = dict()
+    def cadastrarVeiculos(veiculos):
         while True:
-            print('\n[1] - Cadastrar\n[2] - Listar\n[3] - Buscar RGA\n[4] - Salvar\n[5] - Carregar')
-            opcao = input('\nDigite a Opção: ')
-            if opcao == '1':
-                cadastrar(cadastros)
-            elif opcao == '2':
-                listagem(cadastros)
-            elif opcao == '3':
-                buscar(cadastros)
-            elif opcao == '4':
-                salvar(cadastros)
-            elif opcao == '5':
-                retorno = carregar()
-                if retorno is not None:
-                    cadastros = retorno
+            fabricante = input("Digite a fabricante do veículo: ")
+            modelo = input("Digite o modelo do veículo: ")
+            ano = input("Digite o ano do veículo: ")
+            cor = input("digite a cor do veículo: ")
+            valor = input("Digite o o valor da diária do veículo: ")
+
+            if veiculos == dict():
+                codigo = 1
             else:
-                print('Opção Inválida !!')
-    menu()
+                codigo = max(int(key) for key in veiculos.keys()) + 1
+
+            veiculos[codigo] = fabricante, modelo, ano, cor, valor
+
+            continuar = input(" Dejesa cadastrar outro veículo(s/n):")
+
+            while continuar != 's' and continuar != 'n':
+                continuar = input("Coloque uma resposta válida:")
+
+            if continuar == 'n':
+                break
+
+    # visualizar veículo
+
+    def visualizarVeiculo(veiculos):
+        print('')
+        print(
+            f'{"código":<6} | {"Fabricante":<15} | {"Modelo":<17} | {"Ano":<13} | {"Cor":<15} | {"Valor":<17} |')
+        print("-" * 100)
+        for i in veiculos.keys():
+            print(
+                f'{i:<6} | {veiculos[i][0]:<15} | {veiculos[i][1]:<17} | {veiculos[i][2]:<13} | {veiculos[i][3]:<15} | {veiculos[i][4]:<18}| ')
+        print('')
+
+    # Função para buscar um unico veículo
+
+    def buscarVeiculo(veiculos):
+        codigo = input("Digite o código do veículo: ")
+        print('')
+        print("Fabricante: ", veiculos[codigo][0])
+        print("Modelo: ", veiculos[codigo][1])
+        print("Ano: ", veiculos[codigo][2])
+        print("Cor: ", veiculos[codigo][3])
+        print("Valor da Diária:", veiculos[codigo][4])
+        print('')
+
+    # função para editar veículo
+
+    def EditarVeiculo(veiculo):
+        escolhaCodigo = input('Digite o código do Veículo :')
+        print('1 - Fabricante \n 2 - Modelo \n 3 - Ano \n 4 - Cor\n 5 - Valor da Diária')
+
+        parte = int(input('qual dado do veículo:'))
+        novoAtributo = input("Dejesa substituir esse atributo pelo o que:")
+        if escolhaCodigo in veiculo:
+            print(veiculo[escolhaCodigo][parte - 1])
+            veiculo[escolhaCodigo][parte - 1] = novoAtributo
+            print("O dado do veículo foi alterado !!")
+        else:
+            print("Esse codigo não existe")
+
+    # função para deletar
+
+    def deletarVeiculo(veiculo):
+        escolha = input("Insira o codigo que queira deletar:")
+        deletar = veiculo.pop(escolha)
+        print("Veículo deletado!")
+        return deletar
+
+    # função para mostrar o menu
+
+    def menuVeiculo():
+        print("1 - Cadastrar Veículo")
+        print("2 - Visualisar Veículo")
+        print("3 - Editar Veículo")
+        print("4 - Deletar Veículo")
+        print("5 - Buscar Veículo")
+        print("6 - Voltar")
+
+    # -------------------------------------
+
+    while True:
+        veiculos = carregarVeiculo()
+        menuVeiculo()
+        opcao = int(input('Escolha uma opção:'))
+
+        if (opcao == 1):
+            cadastrarVeiculos(veiculos)
+            salvarVeiculo(veiculos)
+
+        elif opcao == 2:
+            visualizarVeiculo(veiculos)
+
+        elif opcao == 3:
+            EditarVeiculo(veiculos)
+            salvarVeiculo(veiculos)
+        elif opcao == 4:
+            deletarVeiculo(veiculos)
+            salvarVeiculo(veiculos)
+        elif opcao == 5:
+            buscarVeiculo(veiculos)
+        elif opcao == 6:
+            print("Saindo....")
+            break
+        else:
+            print("Coloque uma opção válida")
+
 
 if __name__ == '__main__':
-    menu()
+    cadastrar_veiculos()
