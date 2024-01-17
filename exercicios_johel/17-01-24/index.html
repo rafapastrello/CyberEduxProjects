@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+        
+        <title>Página 1</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Login</h1>
+        </header>
+
+    <!--
+        <div>
+            <nav>
+            <ul>
+                <li><a href="index.html">• Inserir</a></li>
+                <li><a href="lista.php">• Lista</a></li>
+                <li><a href="sobre.html">• Sobre</a></li>
+            </ul>
+            </nav>
+        </div>
+    -->
+        <main>
+            <h2 class="h2MainIndex">Insira as informações:</h2>
+            <form action="#" method="post">
+                <label for="nome" class="label-left">Nome: </label>
+                <input type="name" required name="nome" id="id-nome" placeholder="Insira seu nome">
+
+                <label for="data-nascimento" class="label-left">Data de nascimento: </label>
+                <input type="date" name="data-nascimento" id="id-data">
+
+                <label for="email" class="label-left">Email</label>
+                <input type="email" required name="email" id="id-email" placeholder="Insira seu email">
+
+                <label for="telefone" class="label-left">Telefone</label>
+                <input type="tel" required name="telefone" id="id-telefone" placeholder="(00)00000-0000">
+
+                <label for="senha" class="label-left">Senha: </label>
+                <input type="password" name="senha" id="id-senha"
+                placeholder="Digite sua senha">
+
+                <label for="senha" class="label-left">Confirmar senha: </label>
+                <input type="password" name="senha" id="id-senha"
+                placeholder="Confirme sua senha">
+
+                <input type="checkbox" required name="termo-e-condicoes" id="termo-e-condicoes">
+                <label for="termo-e-condicoes" class="label-left">Aceito os termos e condições</label>
+                
+                <input type="submit" value="Login">
+            </form>
+        </main>
+    </body>
+</html>
