@@ -1,0 +1,40 @@
+#qst4 {
+    color: rgb(15, 128, 136);
+}
+
+#qst4:hover {
+    color: red;
+}
+
+#qst4:visited {
+    color: purple;
+}
+
+.destaque {
+    font-size: 80px;
+    color: green;
+}
+
+#qst6 {
+    background-color: gray;
+}
+
+#qst7 {
+    background-color: rgb(163, 211, 50);
+    margin: 50px;
+    padding: 20px;
+}
+
+#qst8 {
+    list-style-type: none;
+}
+
+#qst9-table {
+    background-color: rgb(72, 99, 122);
+    margin: 30px;
+    padding: 30px;
+}
+
+.qst9-tr {
+    background-color: ;
+}
