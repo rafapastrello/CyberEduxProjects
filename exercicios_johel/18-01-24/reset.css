@@ -1,0 +1,98 @@
+/* 
+Este é um arquivo reset CSS feito pelo ChatGPT para resetar estilos padrão de navegadores 
+*/
+
+
+
+/* Box sizing border-box for all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Set base font size and line height */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Remove default button styles */
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+/* Remove default button and input styling in Webkit browsers */
+button,
+input {
+    overflow: visible;
+}
+
+/* Address Firefox and Safari's appearance and focus handling */
+button,
+input,
+select,
+textarea {
+    outline: none;
+}
+
+/* Remove the default vertical scrollbar in IE 11 */
+/* Note: Overflow-y:hidden breaks scrollbar functionality in IE 11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    html {
+        overflow-y: scroll;
+    }
+}
+
+/* Remove default table spacing */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Apply a natural box layout model to all elements */
+html {
+    box-sizing: border-box;
+}
+
+/* Clear floated elements */
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+/* End Reset CSS */

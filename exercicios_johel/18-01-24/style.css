@@ -1,0 +1,22 @@
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.801);
+    padding: 1.5%;
+    z-index: 1100;
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
