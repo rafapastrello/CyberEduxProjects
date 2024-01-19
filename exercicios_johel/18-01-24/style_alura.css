@@ -1,0 +1,46 @@
+body {
+    font-family: 'Poppins';
+    background-color: #00080E;
+}
+
+.img-fundo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 430px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.logo-alura {
+    width: 95px;
+    margin-left: 43px;
+}
+
+a {
+    color: #dffaff;
+    text-decoration: none;
+    padding: 15px;
+}
+
+a:hover {
+    color: #2BDEFD;
+}
+
+.matricule-se {
+    padding: 10px 30px;
+    color: black;
+    background-color: #2bfdc8;
+}
+
+.matricule-se:hover {
+    color: black;
+    background-color: #D9FFF6;
+    transition: 0.5s;
+    font-size: 16.2px;
+}
