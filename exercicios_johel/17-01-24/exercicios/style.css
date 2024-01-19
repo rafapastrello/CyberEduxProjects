@@ -141,19 +141,19 @@ li a:hover {
 
 .div-qst15 {
     max-width: 100%;
-    margin: 30px;
+    margin: 40px;
     background-color: #9cc07e;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0px 0px 45px #000000;
-    overflow: hidden; /* Adicionado para lidar com floats */
+    overflow: hidden;
 }
 
 div.galeria {
     margin: 10px;
     border: 1px solid #ccc;
     float: left;
-    width: calc(20% - 20px); /* 20% para exibir 5 imagens por linha com margens */
+    width: calc(20% - 20px);
     box-sizing: border-box;
     background-color: rgb(185, 185, 185);
     box-shadow: 10px 10px 19px #646464;
@@ -172,8 +172,6 @@ div.desc {
     padding: 15px;
     text-align: center;
 }
-
-
 
 #qst16 {
     position: fixed;
@@ -250,4 +248,11 @@ div.desc-produto {
     background-color: rgb(255, 218, 69);
     transition: 0.5s;
     box-shadow: 0px 0px 30px #878787;
+}
+
+/* Questão 20 */
+@media screen and (max-width: 768px) {
+    div.galeria {
+        width: calc(33.33% - 20px); /* Alterado para exibir 3 imagens por linha em telas menores */
+    }
 }
