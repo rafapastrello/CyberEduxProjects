@@ -11,12 +11,10 @@ header {
     height: auto;
     color: #FFF;
     background-color: rgba(0, 0, 0, 0.801);
-    padding: 1.5%;
-    z-index: 1100;
+    padding: 3%;
 }
 
 main {
-    margin-top: 100px;
-    padding: 20px;
+    margin-top: 130px;
+    padding: 5%;
 }
-
