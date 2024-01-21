@@ -3,13 +3,6 @@ body {
     background-color: #00080E;
 }
 
-.img-fundo {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 430px;
-}
-
 header {
     display: flex;
     justify-content: space-between;
@@ -19,16 +12,15 @@ header {
 }
 
 .logo-alura {
-    width: 105px;
+    width: 95px;
 }
 
 .pesquisa-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 400px;
-    padding: 10px;
-    border: solid 0.5px #40A5B7;
+    padding: 10px 15px;
+    border: solid 0.1px #40A5B7;
     background-color: #00080E;
 }
 
@@ -39,11 +31,13 @@ header {
 }
 
 .lupa-header {
-    color: white;
+    margin-right: 20px;
+    color: #D4F5FB;
     font-size: 20px;
 }
 
 a {
+    font-size: 12px;
     color: #dffaff;
     text-decoration: none;
     padding: 15px;
@@ -51,17 +45,77 @@ a {
 
 a:hover {
     color: #2BDEFD;
+    transition: 0.1s;
 }
 
 .matricule-se {
-    padding: 10px 30px;
+    padding: 15px 45px;
     color: black;
     background-color: #2BFDBE;
+    border-bottom-right-radius: 15px;
 }
 
 .matricule-se:hover {
     color: black;
     background-color: #D9FFF6;
-    transition: 0.5s;
-    font-size: 16.2px;
+    transition: 0.3s;
+    font-size: 12px;
+    border: solid 0.5px #2BFDBE;
+}
+
+main {
+    margin: 0px 75px;
+}
+
+.h1-main{
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    line-height: 64px;
+    position: static;
+    z-index: auto;
+    display: block;
+    color: #D7F9FF;
+    white-space: nowrap;
+    font-family: "Chakra Petch",sans-serif;
+    font-size: 70px;
+}
+
+h1 span {
+    font-family: "Chakra Petch",sans-serif;
+    color: #2BDEFD;
+}
+
+main p {
+    display: flex;
+    margin-top: 20px;
+    color: #94CED8;
+}
+
+.matricule-se-agora {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px 45px;
+    color: black;
+    background-color: #2BFDBE;
+    border-bottom-right-radius: 15px;
+}
+
+.matricule-se-agora:hover {
+    color: black;
+    background-color: #D9FFF6;
+    transition: 0.3s;
+    font-size: 12px;
+    border: solid 0.5px #2BFDBE;
+}
+
+.fundo-img {
+    margin: 200px 80px 0px 0px;
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: right;
 }
