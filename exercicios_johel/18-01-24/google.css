@@ -24,40 +24,41 @@ body {
 }
 
 #header a {
+    font-size: 12px;
     margin-right: 10px;
     text-decoration: none;
-    color: #ffffff;
+    color: #E4E4E5;
 }
 
 #header a:hover {
     text-decoration: underline;
 }
 
+#header img {
+    margin-left: 20px;
+    margin-right: 10px;
+    filter: invert(95%);
+}
+
+#header img:hover {
+    background-color: #2f303465;
+    border-radius: 90px;
+}
+
 #header button {
+    font-size: 15px;
     padding: 8px 25px;
-    background-color: #93BAF9;
+    background-color: #8AB4F8;
     border: none;
     border-radius: 3px;
 }
 
-.img-pontinhos {
-    color: rgba(255,255,255,.87);
-    box-sizing: content-box;
-    display: inline;
-    float: none;
-    line-height: normal;
-    position: static;
-    z-index: auto;
-}
-
-.img-pontinhos:hover {
-    background-color: #2F3034;
-    border-radius: 90px;
+#header button:hover {
+    background-color: #93BAF9;
 }
 
 #google-container {
     text-align: center;
-    margin-top: 50px;
 }
 
 #google-logo {
@@ -99,6 +100,10 @@ body {
     cursor: pointer;
 }
 
+.search-btn:hover {
+    border: 1px solid #5F6368;
+}
+
 .acima-footer {
     font-size: 15px;
     color: #ffffff;
@@ -106,7 +111,8 @@ body {
     right: 0;
     left: 0;
     background-color: #171717;
-    padding: 10px;
+    padding: 12px;
+    padding-left: 20px;
     display: flex;
     z-index: 1000;
     bottom: 45px;
@@ -118,16 +124,22 @@ body {
     right: 0;
     left: 0;
     background-color: #171717;
-    padding: 10px;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
     z-index: 1000;
     bottom: 0;
     border: 1px solid #5F6368;
+    padding-left: 20px;
 }
 
 #footer a {
+    padding: 10px;
     margin-right: 10px;
     text-decoration: none;
     color: #ffffff;
+}
+
+#footer a:hover {
+    text-decoration: underline;
 }
