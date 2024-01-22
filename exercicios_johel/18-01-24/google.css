@@ -17,17 +17,18 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    padding: 10px;
+    padding: 12px;
+    padding-right: 18px;
     display: flex;
     justify-content: flex-end;
     z-index: 1000;
 }
 
 .cabecalho a {
-    font-size: 12px;
+    font-size: 12.5px;
     margin-right: 10px;
     text-decoration: none;
-    color: #E4E4E5;
+    color: #ffffff;
 }
 
 .cabecalho a:hover {
@@ -47,7 +48,7 @@ body {
 
 .cabecalho button {
     font-size: 15px;
-    padding: 8px 25px;
+    padding: 9px 26px;
     background-color: #8AB4F8;
     border: none;
     border-radius: 3px;
