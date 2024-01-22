@@ -21,8 +21,19 @@ body {
     border-radius: 10px;
 }
 
-.container h1 {
+.descricao {
+    font-weight: bold;
+    padding: 20px 0 0 0;
+}
+
+.container a {
+    color: #FFF;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.container a:hover {
+    color: #00FFF8;
 }
 
 .container h2, p {
@@ -36,6 +47,7 @@ body {
 }
 
 .informacoes {
+    padding: 5px 0 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
