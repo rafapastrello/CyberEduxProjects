@@ -10,14 +10,14 @@ body {
 }
 
 .container {
-    max-width: 300px;
+    max-width: 250px;
     box-shadow: 0 0 40px #000000;
     border-radius: 20px;
-    padding: 30px;
+    padding: 25px;
 }
 
 .image-equilibrium {
-    width: 300px;
+    width: 250px;
     border-radius: 10px;
 }
 
@@ -27,7 +27,8 @@ body {
 
 .descricao {
     font-weight: bold;
-    padding: 20px 0 0 0;
+    padding: 15px 0 0 0;
+    font-size: 12px;
 }
 
 .container a {
@@ -64,7 +65,7 @@ body {
 }
 
 .image-avatar {
-    width: 30px;
+    width: 25px;
     border: 1px solid #FFF;
     margin-right: 10px;
     color: #677992;
