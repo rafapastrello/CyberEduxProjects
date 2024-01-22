@@ -25,10 +25,14 @@ body {
     font-size: 20px;
 }
 
-.container h2 {
+.container h2, p {
     font-weight: normal;
     font-size: 16px;
-    color: #677992;
+    color: #778aa6;
+}
+
+.informacoes p {
+    margin: auto 10px;
 }
 
 .informacoes {
@@ -47,9 +51,6 @@ body {
     width: 30px;
     border: 1px solid #FFF;
     margin-right: 10px;
-}
-
-.creation-of p {
     color: #677992;
 }
 
