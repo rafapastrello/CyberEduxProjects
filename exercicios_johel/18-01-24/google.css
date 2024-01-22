@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 
-#header {
+.cabecalho {
     align-items: center;
     font-size: 15px;
     position: fixed;
@@ -23,29 +23,29 @@ body {
     z-index: 1000;
 }
 
-#header a {
+.cabecalho a {
     font-size: 12px;
     margin-right: 10px;
     text-decoration: none;
     color: #E4E4E5;
 }
 
-#header a:hover {
+.cabecalho a:hover {
     text-decoration: underline;
 }
 
-#header img {
+.cabecalho img {
     margin-left: 20px;
     margin-right: 10px;
     filter: invert(95%);
 }
 
-#header img:hover {
+.cabecalho img:hover {
     background-color: #2f303465;
     border-radius: 90px;
 }
 
-#header button {
+.cabecalho button {
     font-size: 15px;
     padding: 8px 25px;
     background-color: #8AB4F8;
@@ -53,25 +53,25 @@ body {
     border-radius: 3px;
 }
 
-#header button:hover {
+.cabecalho button:hover {
     background-color: #93BAF9;
 }
 
-#google-container {
+.container-google {
     text-align: center;
 }
 
-#google-logo {
+.logo-google {
     margin-bottom: 20px;
 }
 
-#search-form {
+.formulario-pesquisa {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-#search-input {
+.entrada-pesquisa {
     color: #ffffff;
     background-color: #202124;
     padding: 10px;
@@ -81,14 +81,14 @@ body {
     font-size: 16px;
 }
 
-#search-buttons {
+.botoes-pesquisa {
     color: #E8EAED;
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
-.search-btn {
+.botao-pesquisa {
     margin-right: 10px;
     padding: 8px 16px;
     font-size: 14px;
@@ -100,11 +100,11 @@ body {
     cursor: pointer;
 }
 
-.search-btn:hover {
+.botao-pesquisa:hover {
     border: 1px solid #5F6368;
 }
 
-.acima-footer {
+.acima-rodape {
     font-size: 15px;
     color: #ffffff;
     position: absolute;
@@ -118,7 +118,7 @@ body {
     bottom: 45px;
 }
 
-#footer {
+.rodape {
     font-size: 15px;
     position: fixed;
     right: 0;
@@ -133,13 +133,13 @@ body {
     padding-left: 20px;
 }
 
-#footer a {
+.rodape a {
     padding: 10px;
     margin-right: 10px;
     text-decoration: none;
     color: #ffffff;
 }
 
-#footer a:hover {
+.rodape a:hover {
     text-decoration: underline;
 }
