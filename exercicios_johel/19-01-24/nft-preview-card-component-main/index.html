@@ -1,33 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- exibe o site corretamente com base no dispositivo do usuário -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | NFT preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <main>
+    <div class="container">
+      <img class="image-equilibrium" src="images/image-equilibrium.jpg" alt="image-equilibrium">
 
-  Equilibrium #3429
-
-  Our Equilibrium collection promotes balance and calm.
-
-  0.041 ETH
-  3 days left
+      <h1>Equilibrium #3429</h1>
   
-  Creation of Jules Wyvern
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      
+      <div class="informacoes">
+        <div>
+          <img class="icon-ethereum" src="images/icon-ethereum.svg" alt="icon-ethereum">
+          <p style="color: #00FFF8;">0.041 ETH</p>
+        </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div>
+          <img class="icon-clock" src="images/icon-clock.svg" alt="icon-clock">
+          <p>3 days left</p>
+        </div>
+      </div>
+
+      <div class="create-of">
+        <hr>
+        <img class="image-avatar" src="images/image-avatar.png" alt="image-avatar">
+        
+        <p>Creation of Jules Wyvern</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/rafllosilva">Rafa Pastrello</a>.
+    </div>
+  </footer>
+  
 </body>
 </html>
