@@ -21,6 +21,10 @@ body {
     border-radius: 10px;
 }
 
+.image-equilibrium:hover {
+    background-color: #00FFF8;
+}
+
 .descricao {
     font-weight: bold;
     padding: 20px 0 0 0;
@@ -66,7 +70,8 @@ body {
     color: #677992;
 }
 
-.creation-of p span {
+.creation-of p a {
+    font-size: 16px;
     color: #ffffff;
 }
 
