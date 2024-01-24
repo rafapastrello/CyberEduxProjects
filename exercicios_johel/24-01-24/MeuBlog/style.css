@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins';
     background-color: #343a40;
     color: #dee2e6;
 }
@@ -100,3 +100,8 @@ footer {
     color: #fff;
 }
 
+.social-logo {
+    max-width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
