@@ -92,6 +92,7 @@ footer {
 }
 
 .btn-login-neon:hover {
+    background-color: #2cc951;
     box-shadow: 0 0 20px rgba(40, 167, 69, 1);
 }
 
