@@ -10,67 +10,73 @@
 </head>
 <body>
 
-<!-- Conteúdo da Página de Login -->
-<section class="container mt-4">
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <div class="card">
-                <div class="card-body">
-                    <h2 class="card-title text-center">Criar Conta</h2>
+    <!-- Botão de Voltar -->
+    <div class="d-flex justify-content-center align-items-center mt-3">
+        <a href="javascript:history.go(-1)" class="btn btn-secondary">Voltar</a>
+    </div>
 
-                    <!-- Formulário de Login -->
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputNome">Nome</label>
-                                <input type="text" class="form-control" id="inputNome" placeholder="Seu Nome">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputSobrenome">Sobrenome</label>
-                                <input type="text" class="form-control" id="inputSobrenome" placeholder="Seu Sobrenome">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                                <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Seu Email">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputDataNascimento">Data de Nascimento</label>
-                                <input type="date" class="form-control" id="inputDataNascimento">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputSenha">Senha</label>
-                                <input type="password" class="form-control" id="inputSenha" placeholder="Senha">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputConfirmarSenha">Confirmar Senha</label>
-                                <input type="password" class="form-control" id="inputConfirmarSenha" placeholder="Confirmar Senha">
-                            </div>
-                        </div>
+    <!-- Conteúdo da Página de Login -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Criar Conta</h2>
 
-                        <button type="submit" class="btn btn-login-neon btn-block">Criar Conta</button>
-                    </form>
+                        <!-- Formulário de Login -->
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputNome">Nome</label>
+                                    <input type="text" class="form-control" id="inputNome" placeholder="Seu Nome" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputSobrenome">Sobrenome</label>
+                                    <input type="text" class="form-control" id="inputSobrenome" placeholder="Seu Sobrenome" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Seu Email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputDataNascimento">Data de Nascimento</label>
+                                    <input type="date" class="form-control" id="inputDataNascimento" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputSenha">Senha</label>
+                                    <input type="password" class="form-control" id="inputSenha" placeholder="Senha" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputConfirmarSenha">Confirmar Senha</label>
+                                    <input type="password" class="form-control" id="inputConfirmarSenha" placeholder="Confirmar Senha" required>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-login-neon btn-block">Criar Conta</button>
+                        </form>
+
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Rodapé -->
-<footer class="text-white text-center py-2 fixed-bottom">
-    <div class="container">
-        <p>&copy; 2024 Meu Blog. Todos os direitos reservados.</p>
-    </div>
-</footer>
+    <!-- Rodapé -->
+    <footer class="text-white text-center py-2 fixed-bottom">
+        <div class="container">
+            <p>&copy; 2024 Meu Blog. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
