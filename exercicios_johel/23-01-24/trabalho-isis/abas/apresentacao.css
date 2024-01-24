@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(47, 47, 47);
+}
+header{
+    height: 7rem;
+}
+#cima{
+    display: inline;
+   
+}
+#cima > h1{
+    margin-top: 1rem;
+    margin-left: 5rem;
+    padding-left: 1rem;
+}
+#cima > img{
+   width: 5rem; 
+   height:5rem;
+   float: left;
+ 
+}
+#cabecalho{
+background-color: yellow;
+
+} 
+#abas > a{
+    color: black;
+
+}
+#abas > a:hover{
+    color: blue;
+}
+p{
+    color: white;
+    width: 75%;
+    margin: auto;
+    margin-left: 10rem;
+    margin-top: 3rem;
+    font-size: large;
+}
+
+#turmas{
+    text-align: center;
+    margin-top: 2rem;
+   
+}
+#turmas>h2{
+    color: yellow;
+    margin-bottom: 2rem;
+    margin-right: 12rem;
+    font-size: 3rem;
+    
+    
+}
+#turma > table ,th{
+    font-size: 20px;
+}
+
