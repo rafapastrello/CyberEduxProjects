@@ -25,7 +25,7 @@ header h1 {
 }
 
 .container {
-    max-width: 1300px;
+    max-width: 1400px;
 }
 
 section {
@@ -36,6 +36,7 @@ section {
 }
 
 .card {
+    margin-left: 10px;
     border: none;
     transition: box-shadow 0.3s;
     background-color: #343a40;
@@ -78,6 +79,7 @@ footer {
 }
 
 .btn-neon:hover {
+    background-color: #0093f5;
     box-shadow: 0 0 20px rgba(0, 123, 255, 1);
 }
 
