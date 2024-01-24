@@ -100,6 +100,10 @@ footer {
     color: #fff;
 }
 
+.list-group-item {
+    color: #343a40;
+}
+
 .social-logo {
     max-width: 40px;
     height: auto;

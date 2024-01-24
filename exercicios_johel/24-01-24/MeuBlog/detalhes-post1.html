@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Post - Meu Blog</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="text-white text-center py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-md-left">
+                    <h1>Meu Blog</h1>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <a href="index.html" class="text-white">Home</a>
+                    <a href="sobre.html" class="text-white ml-3">Sobre</a>
+                    <a href="redes-sociais.html" class="text-white ml-3">Redes Sociais</a>
+                    <a href="login.html"><button class="btn btn-login-neon ml-3">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Botão de Voltar -->
+    <div class="d-flex justify-content-center align-items-center mt-3">
+        <a href="javascript:history.go(-1)" class="btn btn-secondary">Voltar</a>
+    </div>
+
+    <!-- Conteúdo da Página de Detalhes do Post -->
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Título do Primeiro Post</h2>
+                        <img src="https://flowti.com.br/storage/blog/1438292023022463f8cbe5e1c99.png" class="card-img-top" alt="Imagem do Post 1">
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+                        </p>
+                        <p class="card-text">
+                            Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">Publicado em: 23 de Janeiro de 2024</small>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Seção de Comentários -->
+                <div class="mt-4">
+                    <h3>Comentários</h3>
+
+                    <!-- Formulário de Comentário -->
+                    <form>
+                        <div class="form-group">
+                            <label for="inputComentario">Comentário</label>
+                            <textarea class="form-control" id="inputComentario" rows="3" placeholder="Digite seu comentário"></textarea>
+                        </div>
+                        <a href="#" class="btn btn-neon mt-2">Enviar Comentário</a>
+                        
+                    </form>
+
+                    <!-- Lista de Comentários -->
+                    <div class="mt-4">
+                        <h4>Comentários Anteriores:</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Comentário 1 - Nome do Usuário</li>
+                            <li class="list-group-item">Comentário 2 - Nome do Usuário</li>
+                            <li class="list-group-item">Comentário 3 - Nome do Usuário</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-white text-center py-2">
+        <div class="container">
+            <p>&copy; 2024 Meu Blog. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

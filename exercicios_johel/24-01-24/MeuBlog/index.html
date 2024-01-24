@@ -25,11 +25,11 @@
                 <div class="col-md-6 text-md-left">
                     <h1>Meu Blog</h1>
                 </div>
-                <div class="col-md-6 text-md-right">
-                    <a href="#" class="text-white">Home</a>
+                <div class="col-md-6 text-md-right mx-auto mx-md-0">
+                    <a href="index.html" class="text-white">Home</a>
                     <a href="sobre.html" class="text-white ml-3">Sobre</a>
                     <a href="redes-sociais.html" class="text-white ml-3">Redes Sociais</a>
-                    <a href="login.html" class="btn btn-login-neon ml-3">Login</a>
+                    <a href="login.html"><button class="btn btn-login-neon ml-3">Login</button></a>
                 </div>
             </div>
         </div>
@@ -132,21 +132,29 @@
         </div>
     </section>
 
-    <!-- Feedbacks -->
-    <section class="container mt-4 mb-4">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Feedbacks</h4>
-                        <p class="card-text">Visualizar feedbacks ou adicionar feedback.</p>
-                        <a href="#" class="btn btn-neon">Ver Feedbacks</a>
-                        <a href="#" class="btn btn-neon mt-2">Adicionar Feedback</a>
-                    </div>
-                </div>
+    <!-- Seção de Feedbacks -->
+    <div class="mt-4 container container-sm mb-4">
+        <h3>Feedbacks</h3>
+
+        <!-- Formulário de Feedback -->
+        <form>
+            <div class="form-group">
+                <label for="inputFeedback">Feedback</label>
+                <textarea class="form-control" id="inputFeedback" rows="3" placeholder="Digite seu feedback"></textarea>
             </div>
+            <a href="#" class="btn btn-neon mt-2">Enviar Feedback</a>
+        </form>
+
+        <!-- Lista de Feedbacks -->
+        <div class="mt-4">
+            <h4>Feedbacks Anteriores:</h4>
+            <ul class="list-group">
+                <li class="list-group-item">Feedback 1 - Nome do Usuário</li>
+                <li class="list-group-item">Feedback 2 - Nome do Usuário</li>
+                <li class="list-group-item">Feedback 3 - Nome do Usuário</li>
+            </ul>
         </div>
-    </section>
+    </div>
 
     <!-- Rodapé -->
     <footer class="text-white text-center py-2">
