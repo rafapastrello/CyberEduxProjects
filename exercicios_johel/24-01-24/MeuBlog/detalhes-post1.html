@@ -29,7 +29,7 @@
                     <h1>Meu Blog</h1>
                 </div>
                 <div class="col-md-6 text-md-right">
-                    <a href="index.html" class="text-white">Home</a>
+                    <a href="index.html" class="text-white ml-3">Home</a>
                     <a href="sobre.html" class="text-white ml-3">Sobre</a>
                     <a href="redes-sociais.html" class="text-white ml-3">Redes Sociais</a>
                     <a href="login.html"><button class="btn btn-login-neon ml-3">Login</button></a>
@@ -58,7 +58,7 @@
                             Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
                         </p>
                         <p class="card-text">
-                            <small class="text-muted">Publicado em: 23 de Janeiro de 2024</small>
+                            <small class="text-secondary">Publicado em: 23 de Janeiro de 2024</small>
                         </p>
                     </div>
                 </div>
@@ -68,14 +68,10 @@
                     <h3>Comentários</h3>
 
                     <!-- Formulário de Comentário -->
-                    <form>
-                        <div class="form-group">
-                            <label for="inputComentario">Comentário</label>
-                            <textarea class="form-control" id="inputComentario" rows="3" placeholder="Digite seu comentário"></textarea>
-                        </div>
-                        <a href="#" class="btn btn-neon mt-2">Enviar Comentário</a>
-                        
-                    </form>
+                    <div class="form-floating text-dark">
+                        <textarea class="form-control" placeholder="Digite seu comentário!" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Digite seu comentário!</label>
+                    </div>
 
                     <!-- Lista de Comentários -->
                     <div class="mt-4">

@@ -79,7 +79,7 @@ footer {
 }
 
 .btn-neon:hover {
-    background-color: #0093f5;
+    background-color: #009dff;
     box-shadow: 0 0 20px rgba(0, 123, 255, 1);
 }
 
@@ -100,7 +100,7 @@ footer {
 
 .list-group-item:hover {
     background-color: #e4e4e4;
-    color: #fff;
+    color: #000000;
 }
 
 .list-group-item {
