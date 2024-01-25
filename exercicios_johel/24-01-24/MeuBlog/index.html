@@ -25,23 +25,24 @@
     <!-- Cabeçalho -->
     <header class="text-white text-center py-3">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center mb-4">
                 <div class="col-md-6 text-md-left">
-                    <h1>Meu Blog</h1>
+                    <a class="text-light" href="index.html"><h1 class="text-light">Meu Blog</h1></a>
                 </div>
                 <div class="col-md-6 text-md-right mx-auto mx-md-0">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text"><img style="width: 40px;" src="pngtree-search-3d-icon-render-png-image_6142351.png" alt=""></span>
-                        <div class="form-floating text-dark">
-                            <input type="text" class="form-control" id="floatingInputGroup1" placeholder="O que você procura?">
-                            <label for="floatingInputGroup1">O que você procura?</label>
-                        </div>
-                    </div>
                     <a href="index.html" class="text-white">Home</a>
                     <a href="sobre.html" class="text-white ml-3">Sobre</a>
                     <a href="redes-sociais.html" class="text-white ml-3">Redes Sociais</a>
-                    <a href="login.html"><button class="btn btn-login-neon ml-3">Login</button></a>
+                    <a href="login.html"><button class="btn btn-login-neon text-light ml-3">Login</button></a>
                 </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text"><img style="width: 40px;" src="src/img/icones/search.png" alt=""></span>
+                <div class="form-floating text-dark">
+                    <input type="text" class="form-control" id="floatingInputGroup1" placeholder="O que você procura?">
+                    <label for="floatingInputGroup1">O que você procura?</label>
+                </div>
+                <button type="submit" class="btn btn-login-neon ml-3">Pesquisar</button>
             </div>
         </div>
     </header>
@@ -148,10 +149,13 @@
         <h3>Feedbacks</h3>
 
         <!-- Formulário de Feedback -->
-        <div class="form-floating text-dark">
-            <textarea class="form-control" placeholder="Deixe seu Feedback!" id="floatingTextarea2" style="height: 100px"></textarea>
-            <label for="floatingTextarea2">Deixe seu Feedback!</label>
-        </div>
+        <form action="">
+            <div class="form-floating text-dark mb-2">
+                <textarea class="form-control" placeholder="Deixe seu Feedback!" id="floatingTextarea2" style="height: 100px" required></textarea>
+                <label for="floatingTextarea2">Deixe seu Feedback!</label>
+            </div>
+            <button type="submit" class="btn btn-neon">Enviar</button>
+        </form>
 
         <!-- Lista de Feedbacks -->
         <div class="mt-4">
@@ -161,6 +165,12 @@
                 <li class="list-group-item">Feedback 2 - Nome do Usuário</li>
                 <li class="list-group-item">Feedback 3 - Nome do Usuário</li>
             </ul>
+        </div>
+    </div>
+
+    <div class="mt-4 mb-4">
+        <div class="container">
+            <a class="text-light" href="#"><button type="submit" class="btn btn-login-neon btn-block">Voltar ao topo</button></a>
         </div>
     </div>
 

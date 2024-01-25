@@ -80,7 +80,7 @@ footer {
 
 .btn-neon:hover {
     background-color: #009dff;
-    box-shadow: 0 0 20px rgba(0, 123, 255, 1);
+    box-shadow: 0 0 25px rgba(0, 123, 255, 1);
 }
 
 .btn-login-neon {
@@ -95,7 +95,7 @@ footer {
 
 .btn-login-neon:hover {
     background-color: #2cc951;
-    box-shadow: 0 0 20px rgba(40, 167, 69, 1);
+    box-shadow: 0 0 25px rgba(40, 167, 69, 1);
 }
 
 .list-group-item:hover {
