@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+{% load static %}
+
+    <!-- Posts -->
+        {% for post in posts %}
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{% static 'Blog/img/thumbnails/thumbnail-padrao.png' %}" class="card-img" alt="Thumbnail padrão">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">{{post.titulo}}</h2>
+
+                                <p class="card-text">{{post.resumo}}</p>
+
+                                <p class="text-secondary mb-0">Autor: {{post.autor}}</p>
+
+                                <p class="text-secondary">Publicado em: {{post.publicado_em}}</p>
+
+                                <a href={{post.slug}} class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+{% endblock %}
