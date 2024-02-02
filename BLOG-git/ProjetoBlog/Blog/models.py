@@ -11,3 +11,14 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-publicado_em']
+
+class Comentario(models.Model):
+    post = models.ForeignKey(Post, related_name='comentarios', on_delete=models.CASCADE)
+    nome = models.CharField(max_length=150)
+    email = models.CharField(max_length=100)
+    conteudo = models.TextField()
+    likes = models.IntegerField()
+    publicado_em = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-publicado_em']
