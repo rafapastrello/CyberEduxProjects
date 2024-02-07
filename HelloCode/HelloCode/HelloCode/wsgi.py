@@ -1,5 +1,5 @@
 """
-WSGI config for ProjetoHelloCode project.
+WSGI config for HelloCode project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ProjetoHelloCode.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'HelloCode.settings')
 
 application = get_wsgi_application()
