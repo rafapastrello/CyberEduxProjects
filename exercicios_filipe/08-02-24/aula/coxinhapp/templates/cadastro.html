@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block titulo %}Cadastro{% endblock titulo %}Cadastro{% block conteudo %}
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+        <input name="nome" type="text" class="form-control" placeholder="Nome">
+        <label for="nome" class="form-label">Nome</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input name="estado" type="text" class="form-control" placeholder="Estado">
+        <label for="estado" class="form-label">Estado</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input name="cidade" type="text" class="form-control" placeholder="Cidade">
+        <label for="cidade" class="form-label">Cidade</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+
+{% endblock conteudo %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block titulo %}Consulta{% endblock titulo %}
+
+{% block conteudo %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Cidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pessoa in pessoas %}
+        <tr>
+            <th scope="row">{{pessoa.id}}</th>
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.estado}}</td>
+            <td>{{pessoa.cidade}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock conteudo %}
