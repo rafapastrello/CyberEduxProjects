@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block titulo %}MiniBlog Feed{% endblock titulo %}
+{% block titulo %}Feed{% endblock titulo %}
 
 {% block conteudo %}
 
@@ -11,11 +11,35 @@
             <div class="card-body">
                 <h5 class="card-title">{{post.titulo}}</h5>
                 <p class="card-text">{{post.conteudo}}</p>
+                <p class="card-text text-secondary">Autor: {{post.autor}}</p>
+                <p class="card-text text-secondary">Pulicado em: {{post.dt_publicacao}}</p>
                 <a href="#" class="btn btn-primary">Ler mais</a>
             </div>
         </div>
     </div>
     {% endfor %}
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">post.titulo</h5>
+                <p class="card-text">post.conteudo</p>
+                <p class="text-secondary">Autor: post.autor</p>
+                <p class="text-secondary">Pulicado em: post.dt_publicacao</p>
+                <a href="#" class="btn btn-primary">Ler mais</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">post.titulo</h5>
+                <p class="card-text">post.conteudo</p>
+                <p class="card-text text-secondary">Autor: post.autor</p>
+                <p class="card-text text-secondary">Pulicado em: post.dt_publicacao</p>
+                <a href="#" class="btn btn-primary">Ler mais</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock conteudo %}

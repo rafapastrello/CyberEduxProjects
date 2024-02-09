@@ -4,9 +4,9 @@ from django.db import models
 
 class Post(models.Model):
     id = models.AutoField(primary_key=True)
-    titulo = models.TextField()
-    conteudo = models.TextField()
-    autor = models.TextField()
+    titulo = models.TextField
+    conteudo = models.TextField
+    autor = models.TextField
     dt_publicacao = models.DateTimeField(auto_now_add=True)
 
     class Meta:
