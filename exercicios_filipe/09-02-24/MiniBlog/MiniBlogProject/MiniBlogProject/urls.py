@@ -20,5 +20,6 @@ from MiniBlogApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index)
+    path('feed/', views.index),
+    path('publicar/', views.publicar_page),
 ]

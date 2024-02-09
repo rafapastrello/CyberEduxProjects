@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}MiniBlog Feed{% endblock titulo %}
+
+{% block conteudo %}
+
+<div class="row">
+    {% for post in posts %}
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{post.titulo}}</h5>
+                <p class="card-text">{{post.conteudo}}</p>
+                <a href="#" class="btn btn-primary">Ler mais</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock conteudo %}
