@@ -25,8 +25,8 @@ def cadastro_page(request):
 
 def consulta_page(request):
     #pessoas = Pessoa.objects.filter(estado = "Rio de Janeiro")
-    pessoas = Pessoa.objects.raw("SELECT * FROM coxinhapp_pessoa WHERE cidade = 'Cuiabá'")
-    #pessoas = Pessoa.objects.all()
+    #pessoas = Pessoa.objects.raw("SELECT * FROM coxinhapp_pessoa WHERE cidade = 'Cuiabá'")
+    pessoas = Pessoa.objects.all()
     return render(request, 'consulta.html', {
         'pessoas': pessoas
     })
