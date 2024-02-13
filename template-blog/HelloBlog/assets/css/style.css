@@ -12,7 +12,7 @@ body {
 }
 
 .bolinhas {
-    width: 50px;
+    width: 40px;
     margin: 1% 2%;
 }
 
@@ -124,3 +124,6 @@ footer {
     height: auto;
     margin-right: 10px;
 }
+
+
+

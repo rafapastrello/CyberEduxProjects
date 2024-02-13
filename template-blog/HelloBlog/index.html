@@ -27,28 +27,68 @@
 <body>
     <div class="conteudo">
         <!-- Ante Cabeçalho-->
-        <div class="faixa">
-            <img src="assets/img/bolinhas-MacOs-fundo-transparente.png" alt="bolinhas" class="bolinhas">
+        <div class="border-bottom border-secondary faixa">
+            <img src="assets/img/icones/bolinhas-MacOs-fundo-transparente.png" alt="bolinhas" class="bolinhas">
         </div>
 
         <!-- Cabeçalho -->
         <header class="text-white text-center">
             <div id='topo' class="my-element mx-5">
                 <div class="row align-items-center mb-4">
-                    <div class="col-md-6 text-md-left">
-                        <a class="text-light" href="index.html">
-                            <h1 class="text-light">Meu BlogTec</h1>
-                        </a>
-                    </div>
+                    <nav class="navbar navbar-dark bg-dark">
+                        <div class="container-fluid">
+                            
+                            <div class="col-md-6 text-md-left">
+                                <a class="text-light" href="index.html">
+                                    <h4 class="text-light">Hello, Blog!</h4>
+                                </a>
+                            </div>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                                aria-labelledby="offcanvasDarkNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Hello, Blog!</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Sobre</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Redes Sociais</a>
+                                        </li>
+                                    </ul>
+                                    <form class="d-flex mt-3" role="search">
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-success" type="submit">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </nav>
+                    
                     <div class="col-md-6 text-md-right mx-auto mx-md-0">
                         <a href="index.html" class="text-white">Home</a>
-                        <a href="sobre.html" class="text-white ml-3">Sobre</a>
-                        <a href="redes_sociais.html" class="text-white ml-3">Redes Sociais</a>
-                        <a href="login.html"><button class="btn btn-login-neon text-light ml-3">Login</button></a>
+                        <a href="templates/sobre.html" class="text-white ml-3">Sobre</a>
+                        <a href="templates/redes_sociais.html" class="text-white ml-3">Redes Sociais</a>
+                        <a href="templates/login.html"><button
+                                class="btn btn-login-neon text-light ml-3">Login</button></a>
                     </div>
                 </div>
                 <div class="input-group mb-3">
-                    <span class="input-group-text"><img style="width: 40px;" src="search.png" alt=""></span>
+                    <span class="input-group-text"><img style="width: 40px;" src="assets/img/icones/search.png"
+                            alt=""></span>
                     <div class="form-floating text-dark">
                         <input type="text" class="form-control" id="floatingInputGroup1"
                             placeholder="O que você procura?">
@@ -81,8 +121,8 @@
                         <div class="card">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="https://flowti.com.br/storage/blog/1438292023022463f8cbe5e1c99.png"
-                                        class="card-img" alt="Imagem do Post 1">
+                                    <img src="assets/img/thumbnails/cadeados.png" class="card-img"
+                                        alt="Imagem do Post 1">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -102,8 +142,8 @@
                         <div class="card">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="https://flowti.com.br/storage/blog/1438292023022463f8cbe5e1c99.png"
-                                        class="card-img" alt="Imagem do Post 2">
+                                    <img src="assets/img/thumbnails/codigos.jpg" class="card-img"
+                                        alt="Imagem do Post 2">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -123,8 +163,8 @@
                         <div class="card">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="https://flowti.com.br/storage/blog/1438292023022463f8cbe5e1c99.png"
-                                        class="card-img" alt="Imagem do Post 3">
+                                    <img src="assets/img/thumbnails/tec-page.jpg" class="card-img"
+                                        alt="Imagem do Post 3">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -144,8 +184,8 @@
                         <div class="card">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="https://flowti.com.br/storage/blog/1438292023022463f8cbe5e1c99.png"
-                                        class="card-img" alt="Imagem do Post 4">
+                                    <img src="assets/img/thumbnails/thumbnail-padrao.png" class="card-img"
+                                        alt="Imagem do Post 4">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
@@ -165,8 +205,8 @@
                         <div class="card">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="https://flowti.com.br/storage/blog/1438292023022463f8cbe5e1c99.png"
-                                        class="card-img" alt="Imagem do Post 5">
+                                    <img src="assets/img/thumbnails/tec-page.jpg" class="card-img"
+                                        alt="Imagem do Post 5">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
