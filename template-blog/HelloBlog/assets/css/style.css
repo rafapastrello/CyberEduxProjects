@@ -1,14 +1,16 @@
 body {
     font-family: 'Poppins';
-    background-color: rgb(220, 220, 220);
+    background-color: #212529;
+    margin: 5px 0;
+    border-radius: 10px;
     color: #dee2e6;
 }
 
-.conteudo {
-    background-color: #212529;
-    margin: 0.5%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px black;
+body.dark-theme {
+    background-color: #0076ec;
+    /* Cor de fundo do tema escuro */
+    color: #fff;
+    /* Cor do texto do tema escuro */
 }
 
 .bolinhas {
@@ -66,7 +68,6 @@ section {
 
 .card-img-top {
     width: 100%;
-    height: 200px;
     object-fit: cover;
 }
 
