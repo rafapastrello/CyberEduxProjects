@@ -7,10 +7,8 @@ body {
 }
 
 body.dark-theme {
-    background-color: #0076ec;
-    /* Cor de fundo do tema escuro */
-    color: #fff;
-    /* Cor do texto do tema escuro */
+    background-color: #0076ec; /* Cor de fundo do tema escuro */
+    color: #fff; /*Cor do texto do tema escuro */
 }
 
 .bolinhas {

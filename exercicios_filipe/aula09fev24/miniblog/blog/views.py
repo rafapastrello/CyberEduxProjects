@@ -17,4 +17,7 @@ def write_page(request):
         return HttpResponseBadRequest()
 
 def feed_page(request):
-    return render(request, 'feed.html')
+    publicacoes = Publication.objects.order_by('-date').all()
+    return render(request, 'feed.html', {
+        'publicacoes': publicacoes
+    })
