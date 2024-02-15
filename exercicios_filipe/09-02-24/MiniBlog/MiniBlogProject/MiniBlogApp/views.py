@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Post
+#from .models import Post
 from django.http import HttpResponseRedirect, HttpResponseBadRequest
 
 # Create your views here.
@@ -8,9 +8,9 @@ def index(request):
     return render(request, 'feed-posts.html')
 
 def feed_page(request):
-    posts = Post.objects.all()
+    #posts = Post.objects.all()
     return render(request, 'feed-posts.html', {
-        'posts': posts
+        #'posts': posts
     })
 
 def publicar_page(request):
@@ -20,11 +20,11 @@ def publicar_page(request):
         titulo = request.POST.get('titulo')
         conteudo = request.POST.get('conteudo')
         autor = request.POST.get('autor')
-        post = Post()
-        post.titulo = titulo
-        post.conteudo = conteudo
-        post.autor = autor
-        post.save()
+        #post = Post()
+        #post.titulo = titulo
+        #post.conteudo = conteudo
+        #post.autor = autor
+        #post.save()
         return HttpResponseRedirect('/publicar')
     else:
         return HttpResponseBadRequest()
