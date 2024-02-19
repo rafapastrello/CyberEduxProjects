@@ -7,10 +7,9 @@ class Post(models.Model):
     conteudo = models.TextField()
     autor = models.CharField(max_length=100)
     categoria = models.CharField(max_length=100)
-    dt_publicacao = models.DateTimeField(auto_now_add=True)
-    resumo = models.TextField()
     slug = models.SlugField()
-    img_url = models.CharField(max_length=200)
+    nome_img = models.CharField(max_length=200)
+    dt_publicacao = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ['-dt_publicacao']
