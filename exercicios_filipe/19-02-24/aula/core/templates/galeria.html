@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+</head>
+<body>
+
+    {% for figura in figuras %}
+        <h2>{{figura.titulo}}</h2>
+        <img src="{{figura.imagem.url}}" width="300">
+    {% endfor %}
+
+</body>
+</html>
