@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block titulo %}Hello, Blog! - Home{% endblock titulo %}
+{% block titulo %}Home{% endblock titulo %}
 
 {% block conteudo %}
 <div class="input-group mb-3 mt-3">
@@ -65,117 +65,25 @@
     <section class="container-fluid mt-4 mb-4">
         <div class="row">
 
-            <!-- Post 1 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="static/img/thumbnails/cadeados.png" class="card-img img-fluid"
-                                alt="Imagem do Post 1">
-                        </div>
+            {% for publicacao in publicacoes %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src=" {% static 'img/thumbnails/cadeados.png' %}" class="card-img img-fluid" alt="Imagem do Post 1">
+                            </div>
 
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title">Título do Primeiro Post</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit.
-                                    Integer
-                                    nec odio...</p>
-                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{ publicacoes.titulo }}</h4>
+                                    <p class="card-text">{{ publicacoes.conteudo }}</p>
+                                    <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Post 2 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="static/img/thumbnails/codigos.jpg" class="card-img" alt="Imagem do Post 1">
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title">Título do Primeiro Post</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit.
-                                    Integer
-                                    nec odio...</p>
-                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Post 3 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="static/img/thumbnails/tec-page.jpg" class="card-img" alt="Imagem do Post 1">
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title">Título do Primeiro Post</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit.
-                                    Integer
-                                    nec odio...</p>
-                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Post 4 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="static/img/thumbnails/thumbnail-padrao.png" class="card-img"
-                                alt="Imagem do Post 1">
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title">Título do Primeiro Post</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit.
-                                    Integer
-                                    nec odio...</p>
-                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Post 5 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card">
-                    <div class="row no-gutters">
-                        <div class="col-md-4">
-                            <img src="static/img/thumbnails/cadeados.png" class="card-img" alt="Imagem do Post 1">
-                        </div>
-
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h4 class="card-title">Título do Primeiro Post</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit.
-                                    Integer
-                                    nec odio...</p>
-                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
 
         </div>
     </section>

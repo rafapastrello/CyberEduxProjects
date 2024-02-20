@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}Postar{% endblock titulo %}
+
+{% block conteudo %}
+<!-- Botão de Voltar -->
+<div class="d-flex justify-content-center align-items-center">
+    <a href="/" class="btn btn-secondary">Voltar</a>
+</div>
+
+<!-- Conteúdo da Página Postar -->
+<section class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mt-3 mb-5">Publicar</h2>
+
+                    <!-- Formulário de Login -->
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-floating mb-3 text-dark">
+                            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Titulo" required>
+                            <label for="titulo">Título</label>
+                        </div>
+
+                        <div class="form-floating mb-3 text-dark">
+                            <input type="name" class="form-control" id="autor" name="autor" placeholder="Autor" required>
+                            <label for="autor">Autor</label>
+                        </div>
+
+                        <div class="form-floating mb-3 text-dark">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                <option selected>Pessoal</option>
+                                <option value="1">Profissional</option>
+                                <option value="2">Currículos</option>
+                                <option value="3">Esportes</option>
+                                <option value="4">Ergonomia</option>
+                                <option value="5">Vagas</option>
+                                <option value="6">Curiosidades</option>
+                                <option value="7">Eventos</option>
+                            </select>
+                            <label for="floatingSelect">Categoria da Publicação</label>
+                        </div>
+
+                        <div class="form-floating mb-3 text-dark">
+                            <textarea class="form-control" placeholder="Conteúdo da publicação" id="floatingTextarea2"
+                                style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Conteúdo da publicação</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="thumbnail" class="form-label">Thumbnail</label>
+                            <input class="form-control form-control-sm" id="thumbnail" name="thumbnail" type="file" accept="image/png, image/jpeg">
+                        </div>
+
+                        <button type="submit" class="btn btn-login-neon btn-block">Publicar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock conteudo %}

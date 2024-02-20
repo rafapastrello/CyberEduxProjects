@@ -15,8 +15,8 @@ def detalhes_post(request):
 def login(request):
     return render(request, 'login.html')
 
-def postar(request):
-    return render(request, 'postar.html')
+def publicar(request):
+    return render(request, 'publicar.html')
 
 def redes_sociais(request):
     return render(request, 'redes_sociais.html')

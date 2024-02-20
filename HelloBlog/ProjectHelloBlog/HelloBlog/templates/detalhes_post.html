@@ -5,23 +5,24 @@
 
 {% block conteudo %}
 <!-- Conteúdo -->
+
 <!-- Botão de Voltar -->
-<div class="d-flex justify-content-center align-items-center mt-3">
+<div class="d-flex justify-content-center align-items-center">
     <a href="/" class="btn btn-secondary">Voltar</a>
 </div>
 
 <!-- Conteúdo da Página de Detalhes do Post -->
 <section class="container mt-4">
     <div class="col-md-8 p-4">
-        <h1 class="card-title mt-4 mb-5">{{post.titulo}}</h1>
+        <h1 class="card-title mt-4 mb-5">{{Publicacao.titulo}}</h1>
 
         <img class="card-img-top mb-5" src="{% static "img/thumbnails/codigos.jpg" %}" class="card-img" alt="Thumbnail">
 
-        <p class="card-text">{{post.conteudo}}</p>
+        <p class="card-text">{{Publicacao.conteudo}}</p>
 
-        <p class="text-secondary mb-0">Autor: {{post.autor}}</p>
+        <p class="text-secondary mb-0">Autor: {{Publicacao.autor}}</p>
 
-        <p class="text-secondary">Publicado em: {{post.publicado_em}}</p>
+        <p class="text-secondary">Publicado em: {{Publicacao.publicado_em}}</p>
     </div>
 </section>
 

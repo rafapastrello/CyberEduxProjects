@@ -23,7 +23,7 @@ urlpatterns = [
     path('', views.home),
     path('detalhes-post/', views.detalhes_post),
     path('login/', views.login),
-    path('postar/', views.postar),
+    path('publicar/', views.publicar),
     path('redes-sociais/', views.redes_sociais),
     path('sobre/', views.sobre),
 ]
