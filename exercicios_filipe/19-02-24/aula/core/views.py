@@ -8,7 +8,7 @@ def galeria_view(request):
     return render(request, 'galeria.html', {
         'figuras': figuras
     })
-    
+
 def carregar_view(request):
     if request.method == "GET":
         return render(request, 'carregar.html')

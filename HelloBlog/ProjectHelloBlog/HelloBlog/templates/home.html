@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+
+{% block titulo %}Hello, Blog! - Home{% endblock titulo %}
+
+{% block conteudo %}
+
+<!-- Cabeçalho -->
+<nav class="mt-4">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-geral-tab" data-bs-toggle="tab" data-bs-target="#nav-geral"
+            type="button" role="tab" aria-controls="nav-geral" aria-selected="true">Geral</button>
+        <button class="nav-link" id="nav-profissional-tab" data-bs-toggle="tab" data-bs-target="#nav-profissional"
+            type="button" role="tab" aria-controls="nav-profissional" aria-selected="false">Profissional</button>
+        <button class="nav-link" id="nav-pessoal-tab" data-bs-toggle="tab" data-bs-target="#nav-pessoal" type="button"
+            role="tab" aria-controls="nav-pessoal" aria-selected="false">Pessoal</button>
+        <button class="nav-link" id="nav-curriculos-tab" data-bs-toggle="tab" data-bs-target="#nav-curriculos"
+            type="button" role="tab" aria-controls="nav-curriculos" aria-selected="false">Currículos</button>
+        <button class="nav-link" id="nav-esportes-tab" data-bs-toggle="tab" data-bs-target="#nav-esportes" type="button"
+            role="tab" aria-controls="nav-esportes" aria-selected="false">Esportes</button>
+        <button class="nav-link" id="nav-ergonomia-tab" data-bs-toggle="tab" data-bs-target="#nav-ergonomia"
+            type="button" role="tab" aria-controls="nav-ergonomia" aria-selected="false">Ergonomia</button>
+        <button class="nav-link" id="nav-vagas-tab" data-bs-toggle="tab" data-bs-target="#nav-vagas" type="button"
+            role="tab" aria-controls="nav-vagas" aria-selected="false">Vagas</button>
+        <button class="nav-link" id="nav-curiosidades-tab" data-bs-toggle="tab" data-bs-target="#nav-curiosidades"
+            type="button" role="tab" aria-controls="nav-curiosidades" aria-selected="false">Curiosidades</button>
+        <button class="nav-link" id="nav-eventos-tab" data-bs-toggle="tab" data-bs-target="#nav-eventos" type="button"
+            role="tab" aria-controls="nav-eventos" aria-selected="false">Eventos</button>
+    </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-geral" role="tabpanel" aria-labelledby="nav-geral-tab" tabindex="0">
+        Geral</div>
+    <div class="tab-pane fade" id="nav-profissional" role="tabpanel" aria-labelledby="nav-esportes-tab" tabindex="0">
+        Profissional</div>
+    <div class="tab-pane fade" id="nav-pessoal" role="tabpanel" aria-labelledby="nav-esportes-tab" tabindex="0">Pessoal
+    </div>
+    <div class="tab-pane fade" id="nav-curriculos" role="tabpanel" aria-labelledby="nav-esportes-tab" tabindex="0">
+        Currículos</div>
+    <div class="tab-pane fade" id="nav-esportes" role="tabpanel" aria-labelledby="nav-esportes-tab" tabindex="0">
+        Esportes</div>
+    <div class="tab-pane fade" id="nav-ergonomia" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="1">
+        Ergonomia</div>
+    <div class="tab-pane fade" id="nav-vagas" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="2">Vagas</div>
+    <div class="tab-pane fade" id="nav-curiosidades" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="3">
+        Curiosidades</div>
+    <div class="tab-pane fade" id="nav-eventos" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="4">Eventos
+    </div>
+</div>
+</header>
+
+<!-- Conteúdo da Home -->
+<main class="container-fluid">
+    <!-- Posts -->
+    <section class="container-fluid mt-4 mb-4">
+        <div class="row">
+
+            <!-- Post 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="static/img/thumbnails/cadeados.png" class="card-img img-fluid"
+                                alt="Imagem do Post 1">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Título do Primeiro Post</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.
+                                    Integer
+                                    nec odio...</p>
+                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="static/img/thumbnails/codigos.jpg" class="card-img" alt="Imagem do Post 1">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Título do Primeiro Post</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.
+                                    Integer
+                                    nec odio...</p>
+                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="static/img/thumbnails/tec-page.jpg" class="card-img" alt="Imagem do Post 1">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Título do Primeiro Post</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.
+                                    Integer
+                                    nec odio...</p>
+                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 4 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="static/img/thumbnails/thumbnail-padrao.png" class="card-img"
+                                alt="Imagem do Post 1">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Título do Primeiro Post</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.
+                                    Integer
+                                    nec odio...</p>
+                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 5 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="static/img/thumbnails/cadeados.png" class="card-img" alt="Imagem do Post 1">
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Título do Primeiro Post</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit.
+                                    Integer
+                                    nec odio...</p>
+                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Seção de Feedbacks -->
+    <div class="mt-4 container-fluid mb-4">
+        <h3>Feedbacks</h3>
+
+        <!-- Formulário de Feedback -->
+        <form action="">
+            <div class="form-floating text-dark mb-2">
+                <textarea class="form-control" placeholder="Deixe seu Feedback!" id="floatingTextarea2"
+                    style="height: 100px" required></textarea>
+                <label for="floatingTextarea2">Deixe seu Feedback!</label>
+            </div>
+            <button type="submit" class="btn btn-neon">Enviar</button>
+        </form>
+
+        <!-- Lista de Feedbacks -->
+        <div class="mt-4">
+            <h4>Feedbacks Anteriores:</h4>
+            <ul class="list-group">
+                <li class="list-group-item">Feedback 1 - Nome do Usuário</li>
+                <li class="list-group-item">Feedback 2 - Nome do Usuário</li>
+                <li class="list-group-item">Feedback 3 - Nome do Usuário</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mt-4 mb-4">
+        <div class="container-fluid">
+            <a class="text-light" href="#"><button type="submit" class="btn btn-login-neon btn-block">Voltar ao
+                    topo</button></a>
+        </div>
+    </div>
+</main>
+{% endblock conteudo %}

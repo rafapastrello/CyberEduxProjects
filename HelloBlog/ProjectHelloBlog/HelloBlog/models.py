@@ -5,10 +5,11 @@ from django.db import models
 class Publicacao(models.Model):
     id = models.AutoField(primary_key=True)
     autor = models.CharField(max_length=150)
+    categoria = models.CharField(max_length=100)
     conteudo = models.TextField()
     dt_publicacao = models.DateTimeField(auto_now_add=True)
     imagem = models.ImageField(upload_to='imagens/')
     titulo = models.CharField(max_length=150)
 
     class Meta:
-        ordering = ['-publicado_em']
+        ordering = ['-dt_publicacao']
