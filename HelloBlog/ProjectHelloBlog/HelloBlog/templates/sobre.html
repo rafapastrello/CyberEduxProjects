@@ -1,5 +1,8 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block titulo %}Hello, Blog! - Sobre{% endblock titulo %}
+
 {% block conteudo %}
 <main class="container-fluid">
     <!-- Conteúdo da Página Sobre -->
@@ -37,10 +40,4 @@
     </section>
 </main>
 
-<div class="mt-4 mb-4">
-    <div class="container-fluid">
-        <a class="text-light" href="#"><button type="submit" class="btn btn-login-neon btn-block">Voltar ao
-                topo</button></a>
-    </div>
-</div>
 {% endblock conteudo %}

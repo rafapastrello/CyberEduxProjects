@@ -1,8 +1,18 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block titulo %}Hello, Blog! - Home{% endblock titulo %}
 
 {% block conteudo %}
+<div class="input-group mb-3 mt-3">
+    <span class="input-group-text"><img style="width: 40px;" src="{% static 'img/icones/search.png'%}"
+            alt=""></span>
+    <div class="form-floating text-dark">
+        <input type="text" class="form-control" id="floatingInputGroup1" placeholder="O que você procura?">
+        <label for="floatingInputGroup1">O que você procura?</label>
+    </div>
+    <button type="submit" class="btn btn-login-neon ml-3">Pesquisar</button>
+</div>
 
 <!-- Cabeçalho -->
 <nav class="mt-4">
@@ -71,7 +81,7 @@
                                     elit.
                                     Integer
                                     nec odio...</p>
-                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
                             </div>
                         </div>
                     </div>
@@ -93,7 +103,7 @@
                                     elit.
                                     Integer
                                     nec odio...</p>
-                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
                             </div>
                         </div>
                     </div>
@@ -115,7 +125,7 @@
                                     elit.
                                     Integer
                                     nec odio...</p>
-                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
                             </div>
                         </div>
                     </div>
@@ -138,7 +148,7 @@
                                     elit.
                                     Integer
                                     nec odio...</p>
-                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
                             </div>
                         </div>
                     </div>
@@ -160,7 +170,7 @@
                                     elit.
                                     Integer
                                     nec odio...</p>
-                                <a href="detalhes-post.html" class="btn btn-primary">Leia mais</a>
+                                <a href="/detalhes-post" class="btn btn-primary">Leia mais</a>
                             </div>
                         </div>
                     </div>
@@ -197,7 +207,7 @@
 
     <div class="mt-4 mb-4">
         <div class="container-fluid">
-            <a class="text-light" href="#"><button type="submit" class="btn btn-login-neon btn-block">Voltar ao
+            <a class="text-light" href="#topo"><button type="submit" class="btn btn-login-neon btn-block">Voltar ao
                     topo</button></a>
         </div>
     </div>

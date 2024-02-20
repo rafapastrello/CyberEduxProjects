@@ -1,9 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block titulo %}Hello, Blog! - Postar{% endblock titulo %}
+
 {% block conteudo %}
 <!-- Botão de Voltar -->
 <div class="d-flex justify-content-center align-items-center mt-3">
-    <a href="javascript:history.go(-1)" class="btn btn-secondary">Voltar</a>
+    <a href="/" class="btn btn-secondary">Voltar</a>
 </div>
 
 <!-- Conteúdo da Página Postar -->

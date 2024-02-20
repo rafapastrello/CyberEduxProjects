@@ -1,5 +1,8 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block titulo %}Hello, Blog! - Detalhes Post{% endblock titulo %}
+
 {% block conteudo %}
 <!-- Conteúdo -->
 <!-- Botão de Voltar -->
@@ -12,7 +15,7 @@
     <div class="col-md-8 p-4">
         <h1 class="card-title mt-4 mb-5">{{post.titulo}}</h1>
 
-        <img class="card-img-top mb-5" src="codigos.jpg" class="card-img" alt="Thumbnail">
+        <img class="card-img-top mb-5" src="{% static "img/thumbnails/codigos.jpg" %}" class="card-img" alt="Thumbnail">
 
         <p class="card-text">{{post.conteudo}}</p>
 

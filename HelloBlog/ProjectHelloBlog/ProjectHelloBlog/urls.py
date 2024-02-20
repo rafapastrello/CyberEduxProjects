@@ -21,4 +21,9 @@ from HelloBlog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('detalhes-post/', views.detalhes_post),
+    path('login/', views.login),
+    path('postar/', views.postar),
+    path('redes-sociais/', views.redes_sociais),
+    path('sobre/', views.sobre),
 ]
