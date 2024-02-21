@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from .models import Publicacao
+from .models import Publicacao, Perfil
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, HttpResponseBadRequest
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -19,8 +22,33 @@ def detalhes_post(request, id):
 def login_e_seguranca(request):
     return render(request, 'login_e_seguranca.html')
 
-def login(request):
-    return render(request, 'login.html')
+def cadastro(request):
+    if request.method == 'GET':
+        return render(request, 'cadastro.html')
+    elif request.method == 'POST':
+        nome = request.POST.get('nome')
+        sobrenome = request.POST.get('sobrenome')
+        email = request.POST.get('email')
+        dt_nascimento = request.POST.get('dt_nascimento')
+        descricao = request.POST.get('descricao')
+        foto = request.FILES['foto']
+        senha = request.POST.get('senha')
+        user = User.objects.create_user(email, password=senha)
+        user.first_name = nome
+        user.last_name = sobrenome
+        perfil = Perfil()
+        perfil.usuario = user
+        perfil.dt_nascimento = dt_nascimento
+        perfil.descricao = descricao
+        perfil.foto = foto
+        perfil.save()
+        login(request, user)
+        return HttpResponseRedirect('/')
+    else:
+        return HttpResponseBadRequest()
+
+def meus_posts(request):
+    return render(request, 'meus_posts.html')
 
 def minha_conta(request):
     return render(request, 'minha_conta.html')

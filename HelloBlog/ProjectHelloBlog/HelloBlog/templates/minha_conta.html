@@ -7,7 +7,10 @@
 <nav class="mt-1 mb-1">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link text-white bg-secondary active" aria-current="page" href="/minha-conta">Sua Conta</a>
+            <a class="nav-link text-white bg-secondary active" aria-current="page" href="/meus-posts">Meus Posts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="/minha-conta">Minha Conta</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-white" href="/login-e-seguranca">Login e Segurança</a>
@@ -17,35 +20,39 @@
 
 <!-- Informações da conta -->
 <div class="container col-md-8 ml-4">
-    <h3 class="mt-5 mb-3">Informações da Conta</h3>
-    <hr>
-    <div>
-        <img src="{% static 'img/icones/perfil3.jpg' %}" alt="Foto de Perfil" class="profile-img">
-        <button class="btn btn-secondary btn-sm mt-2">Excluir Foto</button>
-        <button class="btn btn-secondary btn-sm mt-2">Alterar Foto</button>
-    </div>
-    <hr>
-    <div class="form-group d-flex align-items-center">
-        <label for="descricao">Descrição:</label>
-        <textarea class="form-control" id="descricao" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
-        <button class="btn btn-secondary btn-sm ml-2">Alterar Informação</button>
-    </div>
-    <hr>
-    <div class="form-group d-flex align-items-center">
-        <label for="nome">Nome:</label>
-        <input type="text" class="form-control" id="nome" value="João">
-        <button class="btn btn-secondary btn-sm ml-auto">Alterar Informação</button>
-    </div>
-    <div class="form-group d-flex align-items-center">
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" class="form-control" id="sobrenome" value="Silva">
-        <button class="btn btn-secondary btn-sm ml-auto">Alterar Informação</button>
-    </div>
-    <hr>
-    <div class="form-group d-flex align-items-center">
-        <label for="data-nascimento">Data de Nascimento:</label>
-        <input type="date" class="form-control" id="data-nascimento" value="2000-01-01">
-        <button class="btn btn-secondary btn-sm ml-auto">Alterar Informação</button>
+    <div class="row">
+        <h3 class="mt-5 mb-3">Informações da Conta</h3>
+        <hr>
+        <form>
+            <div>
+                <img src="{% static 'img/icones/perfil3.jpg' %}" alt="Foto de Perfil" class="profile-img">
+                <button class="btn btn-danger btn-sm mt-2">Excluir Foto</button>
+                <button class="btn btn-secondary btn-sm mt-2">Alterar Foto</button>
+            </div>
+            <hr>
+            <div class="form-group d-flex align-items-center">
+                <label class="col-3" for="descricao">Descrição:</label>
+                <textarea class="col-5 form-control ml-3" id="descricao" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</textarea>
+                <button class="btn btn-secondary btn-sm ml-2">Alterar descrição</button>
+            </div>
+            <hr>
+            <div class="form-group d-flex align-items-center">
+                <label class="col-3" for="nome">Nome:</label>
+                <input type="text" class="col-5 form-control ml-3" id="nome" value="Rafa">
+                <button class="btn btn-secondary btn-sm ml-2">Alterar nome</button>
+            </div>
+            <div class="form-group d-flex align-items-center">
+                <label class="col-3" for="sobrenome">Sobrenome:</label>
+                <input type="text" class="col-5 form-control ml-3" id="sobrenome" value="Pastrello">
+                <button class="btn btn-secondary btn-sm ml-2">Alterar sobrenome</button>
+            </div>
+            <hr>
+            <div class="form-group d-flex align-items-center">
+                <label class="col-3" for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" class="col-5 form-control ml-3" id="data-nascimento" value="2000-01-01">
+                <button class="btn btn-secondary btn-sm ml-2">Alterar Data de Nascimento</button>
+            </div>
+        </form>
     </div>
 </div>
 
