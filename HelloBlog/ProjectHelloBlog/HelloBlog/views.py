@@ -53,8 +53,31 @@ def meus_posts(request):
 def meus_comentarios(request):
     return render(request, 'meus_comentarios.html')
 
+@login_required(login_url='/login')
 def minha_conta(request):
-    return render(request, 'minha_conta.html')
+    perfil = Perfil.objects.get(usuario=request.user)
+    return render(request, 'minha_conta.html', {
+        'authenticated': True,
+        'perfil': perfil,
+        'nome': request.user.username,
+        'email': request.user.email,
+    })
+
+"""
+def minha_conta(request):
+    if request.user.is_authenticated:
+        pass
+        #A pessoa está logada!
+        perfil = Perfil.objects.get(usuario=request.user)
+        return render(request, 'minha_conta.html', {
+            'authenticated': True
+        })
+    else:
+        #A pessoa não está logada!
+        return render(request, 'minha_conta.html', {
+            'authenticated': False
+        })
+"""
 
 def publicar(request):
     if request.method == 'GET':

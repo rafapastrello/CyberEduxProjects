@@ -6,7 +6,7 @@ class Perfil(models.Model):
     dt_nascimento = models.DateField()
     descricao = models.TextField(blank=True, null=True)
     foto = models.ImageField(blank=True, null=True, upload_to='perfil/')
-    
+
 class Publicacao(models.Model):
     id = models.AutoField(primary_key=True)
     autor = models.CharField(max_length=150)
