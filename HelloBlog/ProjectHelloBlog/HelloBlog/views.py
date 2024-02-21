@@ -13,15 +13,6 @@ def home(request):
         'publicacoes': publicacoes
     })
 
-def detalhes_post(request, id):
-    publicacao = Publicacao.objects.get(id=id)
-    return render(request, 'detalhes_post.html', {
-        'publicacao': publicacao
-    })
-
-def login_e_seguranca(request):
-    return render(request, 'login_e_seguranca.html')
-
 def cadastro(request):
     if request.method == 'GET':
         return render(request, 'cadastro.html')
@@ -47,8 +38,20 @@ def cadastro(request):
     else:
         return HttpResponseBadRequest()
 
+def detalhes_post(request, id):
+    publicacao = Publicacao.objects.get(id=id)
+    return render(request, 'detalhes_post.html', {
+        'publicacao': publicacao
+    })
+
+def login_e_seguranca(request):
+    return render(request, 'login_e_seguranca.html')
+
 def meus_posts(request):
     return render(request, 'meus_posts.html')
+
+def meus_comentarios(request):
+    return render(request, 'meus_comentarios.html')
 
 def minha_conta(request):
     return render(request, 'minha_conta.html')
