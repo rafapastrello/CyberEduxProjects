@@ -16,8 +16,14 @@ def detalhes_post(request, id):
         'publicacao': publicacao
     })
 
+def login_e_seguranca(request):
+    return render(request, 'login_e_seguranca.html')
+
 def login(request):
     return render(request, 'login.html')
+
+def minha_conta(request):
+    return render(request, 'minha_conta.html')
 
 def publicar(request):
     if request.method == 'GET':
