@@ -47,6 +47,13 @@ def detalhes_post(request, id):
 def login_e_seguranca(request):
     return render(request, 'login_e_seguranca.html')
 
+def login(request):
+    return render(request, 'login.html')
+
+@login_required(login_url='/login')
+def logout(request):
+    return HttpResponseRedirect('login.html')
+
 def meus_posts(request):
     return render(request, 'meus_posts.html')
 
