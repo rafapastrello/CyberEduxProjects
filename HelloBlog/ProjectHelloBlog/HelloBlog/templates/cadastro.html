@@ -17,6 +17,10 @@
                 <div class="card-body">
                     <h2 class="card-title text-center">Criar Conta</h2>
 
+                    {% if email_repeated %}
+                        <p class="text-danger">Email em uso!</p>
+                    {% endif %}
+
                     <!-- Formulário de Cadastro -->
                     <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}

@@ -7,6 +7,14 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+def consulta_page(request):
+    #publicacoes = Publicacao.objects.filter(estado = "Rio de Janeiro")
+    #publicacoes = Publicacao.objects.raw("SELECT * FROM coxinhapp_pessoa WHERE cidade = 'Cuiabá'")
+    publicacoes = Publicacao.objects.all()
+    return render(request, 'consulta.html', {
+        'publicacoes': publicacoes
+    })
+
 def home(request):
     publicacoes = Publicacao.objects.all()
     return render(request, 'home.html', {
@@ -16,14 +24,23 @@ def home(request):
 
 def cadastro(request):
     if request.method == 'GET':
-        return render(request, 'cadastro.html')
+        return render(request, 'cadastro.html', {
+            "email_repeated": False
+        })
     elif request.method == 'POST':
         nome = request.POST.get('nome')
         sobrenome = request.POST.get('sobrenome')
         email = request.POST.get('email')
+        if User.objects.filter(username=email).count()>0:
+            return render(request, 'cadastro.html', {
+            "email_repeated": True
+        })
         dt_nascimento = request.POST.get('dt_nascimento')
         descricao = request.POST.get('descricao')
-        foto = request.FILES['foto']
+        if "foto" in request.FILES.keys():
+            foto = request.FILES['foto']
+        else:
+            foto = None
         senha = request.POST.get('senha')
         user = User.objects.create_user(email, password=senha)
         user.first_name = nome
@@ -65,11 +82,27 @@ def detalhes_post(request, id):
 def login_e_seguranca(request):
     return render(request, 'login_e_seguranca.html')
 
-def login(request):
-    return render(request, 'login.html')
+def login_view(request):
+    if request.method == 'GET':
+        return render(request, 'login.html', {
+            'incorrect_login': False
+        })
+    elif request.method == 'POST':
+        email = request.POST.get('email')
+        password= request.POST.get('password')
+        user = authenticate(request, email=email, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('/minha-conta')
+        else:
+            return render(request, 'login.html', {
+                'incorrect_login': True
+            })
+    else:
+        return HttpResponseBadRequest()
 
 @login_required(login_url='/login')
-def logout(request):
+def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/login')
 
@@ -92,14 +125,14 @@ def minha_conta(request):
 """
 def minha_conta(request):
     if request.user.is_authenticated:
+        # A pessoa está logada!
         pass
-        #A pessoa está logada!
         perfil = Perfil.objects.get(usuario=request.user)
         return render(request, 'minha_conta.html', {
             'authenticated': True
         })
     else:
-        #A pessoa não está logada!
+        # A pessoa não está logada!
         return render(request, 'minha_conta.html', {
             'authenticated': False
         })

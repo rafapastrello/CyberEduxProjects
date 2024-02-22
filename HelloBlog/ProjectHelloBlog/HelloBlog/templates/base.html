@@ -9,7 +9,7 @@
     <title>Hello, Blog! - {% block titulo %}{% endblock titulo %}</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{% static " img/logos/HB-logo.png" %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static "img/logos/HB-logo.png" %}" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,9 +68,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/login">Login</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/logout">Logout</a>
-                        </li>
                         <li class="nav-item mr-3">
                             <a class="nav-link" href="/cadastro">Cadastro</a>
                         </li>
@@ -80,6 +77,9 @@
                     </ul>
                 </div>
             </nav>
+
+            <p>>>> Logado como {{nome}}</p>
+
         </div>
         <header class="container-fluid">
 
