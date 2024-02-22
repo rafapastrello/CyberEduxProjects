@@ -80,7 +80,9 @@ def detalhes_post(request, id):
         
 
 def login_e_seguranca(request):
-    return render(request, 'login_e_seguranca.html')
+    return render(request, 'login_e_seguranca.html', {
+        'nome': request.user.username,
+    })
 
 def login_view(request):
     if request.method == 'GET':
@@ -107,10 +109,14 @@ def logout_view(request):
     return HttpResponseRedirect('/login')
 
 def meus_posts(request):
-    return render(request, 'meus_posts.html')
+    return render(request, 'meus_posts.html', {
+        'nome': request.user.username,
+    })
 
 def meus_comentarios(request):
-    return render(request, 'meus_comentarios.html')
+    return render(request, 'meus_comentarios.html', {
+        'nome': request.user.username,
+    })
 
 @login_required(login_url='/login')
 def minha_conta(request):
@@ -141,7 +147,9 @@ def minha_conta(request):
 @login_required(login_url='/login')
 def publicar(request):
     if request.method == 'GET':
-        return render(request, 'publicar.html')
+        return render(request, 'publicar.html', {
+        'nome': request.user.username,
+    })
     elif request.method == 'POST':
         titulo = request.POST.get('titulo')
         autor = request.POST.get('autor')
@@ -160,7 +168,11 @@ def publicar(request):
         return HttpResponseBadRequest()
 
 def redes_sociais(request):
-    return render(request, 'redes_sociais.html')
+    return render(request, 'redes_sociais.html', {
+        'nome': request.user.username,
+    })
 
 def sobre(request):
-    return render(request, 'sobre.html')
+    return render(request, 'sobre.html', {
+        'nome': request.user.username,
+    })

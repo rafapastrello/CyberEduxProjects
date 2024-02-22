@@ -9,7 +9,7 @@ class Perfil(models.Model):
 
 class Publicacao(models.Model):
     id = models.AutoField(primary_key=True)
-    autor = models.CharField(max_length=150)
+    autor = models.ForeignKey(User, on_delete=models.CASCADE)
     categoria = models.CharField(max_length=100)
     conteudo = models.TextField()
     dt_publicacao = models.DateTimeField(auto_now_add=True)
