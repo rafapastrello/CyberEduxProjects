@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Publicacao, Perfil
+from .models import Publicacao, Perfil, Comentario
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, HttpResponseBadRequest
 from django.contrib.auth import authenticate, login, logout
@@ -10,7 +10,8 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     publicacoes = Publicacao.objects.all()
     return render(request, 'home.html', {
-        'publicacoes': publicacoes
+        'publicacoes': publicacoes,
+        'nome': request.user.username,
     })
 
 def cadastro(request):
@@ -40,9 +41,26 @@ def cadastro(request):
 
 def detalhes_post(request, id):
     publicacao = Publicacao.objects.get(id=id)
-    return render(request, 'detalhes_post.html', {
-        'publicacao': publicacao
-    })
+    comentarios = Comentario.objects.filter(publicacao=publicacao)
+    if request.method == 'GET':
+        return render(request, 'detalhes_post.html', {
+            'publicacao': publicacao,
+            'comentarios':comentarios,
+        })
+    elif request.method == 'POST':
+        conteudo = request.POST.get("conteudo")
+        comentario = Comentario()
+        comentario.publicacao = publicacao
+        comentario.autor = request.user
+        comentario.conteudo = conteudo
+        comentario.save()
+        return render(request, 'detalhes_post.html', {
+            'publicacao': publicacao,
+            'comentarios': comentarios,
+        })
+    else:
+        return HttpResponseBadRequest()
+        
 
 def login_e_seguranca(request):
     return render(request, 'login_e_seguranca.html')
@@ -52,7 +70,8 @@ def login(request):
 
 @login_required(login_url='/login')
 def logout(request):
-    return HttpResponseRedirect('login.html')
+    logout(request)
+    return HttpResponseRedirect('/login')
 
 def meus_posts(request):
     return render(request, 'meus_posts.html')
@@ -86,6 +105,7 @@ def minha_conta(request):
         })
 """
 
+@login_required(login_url='/login')
 def publicar(request):
     if request.method == 'GET':
         return render(request, 'publicar.html')

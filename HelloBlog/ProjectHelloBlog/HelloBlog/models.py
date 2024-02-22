@@ -18,3 +18,13 @@ class Publicacao(models.Model):
 
     class Meta:
         ordering = ['-dt_publicacao']
+
+class Comentario(models.Model):
+    publicacao = models.ForeignKey(to=Publicacao, related_name='comentarios', on_delete=models.CASCADE)
+    autor = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
+    conteudo = models.TextField()
+    likes = models.IntegerField(default=0)
+    publicado_em = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-publicado_em']

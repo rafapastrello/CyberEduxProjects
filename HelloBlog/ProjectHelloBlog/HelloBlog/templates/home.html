@@ -79,6 +79,10 @@
                                 <div class="card-body">
                                     <h4 class="card-title">{{ publicacao.titulo }}</h4>
                                     <p class="card-text">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                    <div>
+                                        <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                        <p class="text-secondary">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                    </div>
                                     <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
                                 </div>
                             </div>
