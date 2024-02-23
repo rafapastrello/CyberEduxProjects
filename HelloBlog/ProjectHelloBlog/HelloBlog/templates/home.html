@@ -15,7 +15,7 @@
     <button type="submit" class="btn btn-login-neon ml-3">Pesquisar</button>
 </div>
 
-<!-- Cabeçalho -->
+<!-- Conteúdo da Home -->
 <nav class="mt-4">
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <button class="nav-link active" id="nav-geral-tab" data-bs-toggle="tab" data-bs-target="#nav-geral" type="button" role="tab" aria-controls="nav-geral" aria-selected="true">
@@ -39,62 +39,102 @@
     </div>
 </nav>
 
-<div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-geral" role="tabpanel" aria-labelledby="nav-geral-tab" tabindex="0">
-        Geral</div>
-    <div class="tab-pane fade" id="nav-profissional" role="tabpanel" aria-labelledby="nav-profissional-tab" tabindex="1">
-        Profissional</div>
-    <div class="tab-pane fade" id="nav-pessoal" role="tabpanel" aria-labelledby="nav-pessoal-tab" tabindex="2">
-        Pessoal</div>
-    <div class="tab-pane fade" id="nav-curriculos" role="tabpanel" aria-labelledby="nav-curriculos-tab" tabindex="3">
-        Currículos</div>
-    <div class="tab-pane fade" id="nav-esportes" role="tabpanel" aria-labelledby="nav-esportes-tab" tabindex="4">
-        Esportes</div>
-    <div class="tab-pane fade" id="nav-ergonomia" role="tabpanel" aria-labelledby="nav-ergonomia-tab" tabindex="5">
-        Ergonomia</div>
-    <div class="tab-pane fade" id="nav-vagas" role="tabpanel" aria-labelledby="nav-vagas-tab" tabindex="6">
-        Vagas</div>
-    <div class="tab-pane fade" id="nav-curiosidades" role="tabpanel" aria-labelledby="nav-curiosidades-tab" tabindex="7">
-        Curiosidades</div>
-    <div class="tab-pane fade" id="nav-eventos" role="tabpanel" aria-labelledby="nav-eventos-tab" tabindex="8">
-        Eventos
-    </div>
-</div>
-</header>
-
-<!-- Conteúdo da Home -->
 <main class="container-fluid">
-    <!-- Posts -->
-    <section class="container-fluid mt-4 mb-4">
-        <div class="row">
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-geral" role="tabpanel" aria-labelledby="nav-geral-tab" tabindex="0">
+            <!-- Posts -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
 
-            {% for publicacao in publicacoes %}
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
-                            </div>
-
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
-                                    <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
-                                    <div>
-                                        <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
-                                        <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
-                                        <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                    {% for publicacao in publicacoes %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
                                     </div>
-                                    <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            {% endfor %}
+                    {% endfor %}
 
+                </div>
+            </section>
         </div>
-    </section>
+
+        <div class="tab-pane fade" id="nav-profissional" role="tabpanel" aria-labelledby="nav-profissional-tab" tabindex="1">
+            <!-- Posts - Profissional -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
+                    {% for publicacao in publicacoes %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-pane fade" id="nav-pessoal" role="tabpanel" aria-labelledby="nav-pessoal-tab" tabindex="2">
+            Pessoal
+        </div>
+
+        <div class="tab-pane fade" id="nav-curriculos" role="tabpanel" aria-labelledby="nav-curriculos-tab" tabindex="3">
+            Currículos
+        </div>
+
+        <div class="tab-pane fade" id="nav-esportes" role="tabpanel" aria-labelledby="nav-esportes-tab" tabindex="4">
+            Esportes
+        </div>
+
+        <div class="tab-pane fade" id="nav-ergonomia" role="tabpanel" aria-labelledby="nav-ergonomia-tab" tabindex="5">
+            Ergonomia
+        </div>
+
+        <div class="tab-pane fade" id="nav-vagas" role="tabpanel" aria-labelledby="nav-vagas-tab" tabindex="6">
+            Vagas
+        </div>
+
+        <div class="tab-pane fade" id="nav-curiosidades" role="tabpanel" aria-labelledby="nav-curiosidades-tab" tabindex="7">
+            Curiosidades
+        </div>
+
+        <div class="tab-pane fade" id="nav-eventos" role="tabpanel" aria-labelledby="nav-eventos-tab" tabindex="8">
+            Eventos
+        </div>
+    </div>
 
     <div class="mt-4 mb-4">
         <div class="container-fluid">
@@ -102,4 +142,65 @@
         </div>
     </div>
 </main>
+
+<!-- Rodapé -->
+<div class="container">
+    <footer class="py-5">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+                <img src="{% static 'img/icones/HB-icon.png' %}" alt="HB-icon" width="160px">
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+                <form>
+                    <h5>Subscribe to our newsletter</h5>
+                    <p class="text-white-50">Monthly digest of what's new and exciting from us.</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control"
+                            placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>&copy; 2024 Meu Blog. Todos os direitos reservados.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram" />
+                        </svg></a></li>
+                <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook" />
+                        </svg></a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
 {% endblock conteudo %}

@@ -9,9 +9,32 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     publicacoes = Publicacao.objects.all()
+    perfil = Perfil.objects.get(usuario=request.user)
     return render(request, 'home.html', {
         'publicacoes': publicacoes,
         'nome': request.user.username,
+        'email': request.user.email,
+        'perfil': perfil,
+    })
+
+def categorias(request):
+    profissional = Publicacao.objects.filter(categoria = "Profissional")
+    pessoal = Publicacao.objects.filter(categoria = "Pessoal")
+    curriculos = Publicacao.objects.filter(categoria = "Currículos")
+    esportes = Publicacao.objects.filter(categoria = "Esportes")
+    ergonomia = Publicacao.objects.filter(categoria = "Ergonomia")
+    vagas = Publicacao.objects.filter(categoria = "Vagas")
+    curiosidades = Publicacao.objects.filter(categoria = "Curiosidades")
+    eventos = Publicacao.objects.filter(categoria = "Eventos")
+    return render(request, 'home.html', {
+        'profissional': profissional,
+        'pessoal': pessoal,
+        'curriculos': curriculos,
+        'esportes': esportes,
+        'ergonomia': ergonomia,
+        'vagas': vagas,
+        'curiosidades': curiosidades,
+        'eventos': eventos,
     })
 
 def cadastro(request):
