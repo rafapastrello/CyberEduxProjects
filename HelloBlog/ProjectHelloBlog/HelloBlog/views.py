@@ -63,6 +63,7 @@ def detalhes_post(request, id):
         return render(request, 'detalhes_post.html', {
             'publicacao': publicacao,
             'comentarios':comentarios,
+            'nome': request.user.username,
         })
     elif request.method == 'POST':
         conteudo = request.POST.get("conteudo")
@@ -77,7 +78,6 @@ def detalhes_post(request, id):
         })
     else:
         return HttpResponseBadRequest()
-        
 
 def login_e_seguranca(request):
     return render(request, 'login_e_seguranca.html', {
