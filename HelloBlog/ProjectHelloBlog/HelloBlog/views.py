@@ -7,14 +7,6 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def consulta_page(request):
-    #publicacoes = Publicacao.objects.filter(estado = "Rio de Janeiro")
-    #publicacoes = Publicacao.objects.raw("SELECT * FROM coxinhapp_pessoa WHERE cidade = 'Cuiabá'")
-    publicacoes = Publicacao.objects.all()
-    return render(request, 'consulta.html', {
-        'publicacoes': publicacoes
-    })
-
 def home(request):
     publicacoes = Publicacao.objects.all()
     return render(request, 'home.html', {
