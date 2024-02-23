@@ -13,7 +13,7 @@ class Publicacao(models.Model):
     categoria = models.CharField(max_length=100)
     conteudo = models.TextField()
     dt_publicacao = models.DateTimeField(auto_now_add=True)
-    thumbnail = models.ImageField(upload_to='imagens/')
+    thumbnail = models.ImageField(upload_to='thumbnails/')
     titulo = models.CharField(max_length=150)
 
     class Meta:

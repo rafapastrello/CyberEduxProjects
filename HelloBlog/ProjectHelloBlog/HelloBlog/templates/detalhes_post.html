@@ -47,7 +47,7 @@
         <h4>Comentários Anteriores:</h4>
         <ul class="list-group">
             {% for comentario in comentarios %}
-            <li class="list-group-item py-3">{{comentario.conteudo}} - {{comentario.autor.username}}</li>
+            <li class="list-group-item py-3"><img src="{% static "img/icones/like.png" %}" class="mr-3" alt="Like" width="25px">{{comentario.conteudo}} - {{comentario.autor.username}}</li>
 
             {% empty %}
             <p class="list-group-item py-3">Nenhum comentário ainda</p>
