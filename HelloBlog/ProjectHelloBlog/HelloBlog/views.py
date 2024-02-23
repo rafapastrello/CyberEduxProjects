@@ -103,7 +103,6 @@ def login_view(request):
     else:
         return HttpResponseBadRequest()
 
-@login_required(login_url='/login')
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect('/login')
