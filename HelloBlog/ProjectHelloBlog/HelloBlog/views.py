@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Publicacao, Perfil, Comentario
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect, HttpResponseBadRequest
@@ -148,21 +148,25 @@ def minha_conta(request):
 def publicar(request):
     if request.method == 'GET':
         return render(request, 'publicar.html', {
-        'nome': request.user.username,
-    })
+            'nome': request.user.username,
+        })
     elif request.method == 'POST':
         titulo = request.POST.get('titulo')
-        autor = request.POST.get('autor')
         categoria = request.POST.get('categoria')
         conteudo = request.POST.get('conteudo')
         thumbnail = request.FILES['thumbnail']
-        publicacao = Publicacao()
-        publicacao.titulo = titulo
-        publicacao.autor = autor
-        publicacao.categoria = categoria
-        publicacao.conteudo = conteudo
-        publicacao.thumbnail = thumbnail
-        publicacao.save()
+        
+        # Obtém o usuário logado
+        autor = request.user
+        
+        # Cria a publicação
+        publicacao = Publicacao.objects.create(
+            titulo=titulo,
+            autor=autor,
+            categoria=categoria,
+            conteudo=conteudo,
+            thumbnail=thumbnail
+        )
         return HttpResponseRedirect('/')
     else:
         return HttpResponseBadRequest()
