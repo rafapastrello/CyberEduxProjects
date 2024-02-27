@@ -42,7 +42,7 @@
 <main class="container-fluid">
     <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-geral" role="tabpanel" aria-labelledby="nav-geral-tab" tabindex="0">
-            <!-- Posts -->
+            <!-- Posts - Geral -->
             <section class="container-fluid mt-4 mb-4">
                 <div class="row">
 
@@ -79,7 +79,8 @@
             <!-- Posts - Profissional -->
             <section class="container-fluid mt-4 mb-4">
                 <div class="row">
-                    {% for publicacao in publicacoes %}
+
+                    {% for publicacao in profissional %}
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card">
                                 <div class="row no-gutters">
@@ -108,31 +109,234 @@
         </div>
 
         <div class="tab-pane fade" id="nav-pessoal" role="tabpanel" aria-labelledby="nav-pessoal-tab" tabindex="2">
-            Pessoal
+            <!-- Posts - Pessoal -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
+
+                    {% for publicacao in pessoal %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </div>
 
         <div class="tab-pane fade" id="nav-curriculos" role="tabpanel" aria-labelledby="nav-curriculos-tab" tabindex="3">
-            Currículos
+            <!-- Posts - Curriculos -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
+
+                    {% for publicacao in curriculos %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </div>
 
         <div class="tab-pane fade" id="nav-esportes" role="tabpanel" aria-labelledby="nav-esportes-tab" tabindex="4">
-            Esportes
+            <!-- Posts - Esportes -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
+
+                    {% for publicacao in esportes %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </div>
 
         <div class="tab-pane fade" id="nav-ergonomia" role="tabpanel" aria-labelledby="nav-ergonomia-tab" tabindex="5">
-            Ergonomia
+            <!-- Posts - Ergonomia -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
+
+                    {% for publicacao in ergonomia %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </div>
 
         <div class="tab-pane fade" id="nav-vagas" role="tabpanel" aria-labelledby="nav-vagas-tab" tabindex="6">
-            Vagas
+            <!-- Posts - Vagas -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
+
+                    {% for publicacao in vagas %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </div>
 
         <div class="tab-pane fade" id="nav-curiosidades" role="tabpanel" aria-labelledby="nav-curiosidades-tab" tabindex="7">
-            Curiosidades
+            <!-- Posts - Curiosidades -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
+
+                    {% for publicacao in curiosidades %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </div>
 
         <div class="tab-pane fade" id="nav-eventos" role="tabpanel" aria-labelledby="nav-eventos-tab" tabindex="8">
-            Eventos
+            <!-- Posts - Eventos -->
+            <section class="container-fluid mt-4 mb-4">
+                <div class="row">
+
+                    {% for publicacao in eventos %}
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="{{publicacao.thumbnail.url}}" class="card-img img-fluid" alt="Imagem do Post 1">
+                                    </div>
+
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h4 class="card-title text-info mb-3">{{ publicacao.titulo }}</h4>
+                                            <p class="card-text mb-0">{{ publicacao.conteudo | truncatechars:100 }}</p>
+                                            <div>
+                                                <p class="text-secondary mb-0">Autor: {{publicacao.autor}}</p>
+                                                <p class="text-secondary mb-0">Publicado em: {{publicacao.dt_publicacao}}</p>
+                                                <p class="text-secondary">Categoria: {{publicacao.categoria}}</p>
+                                            </div>
+                                            <a href="/detalhes-post/{{publicacao.id}}" class="btn btn-primary">Leia mais</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
         </div>
     </div>
 
